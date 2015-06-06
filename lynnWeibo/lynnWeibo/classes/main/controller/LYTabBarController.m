@@ -8,6 +8,8 @@
 
 #import "LYTabBarController.h"
 
+#define LYRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]
+
 @interface LYTabBarController ()
 
 @end
@@ -17,8 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //1.选中时文字为橙色（渲染）
+    self.tabBar.tintColor = [UIColor orangeColor];
     
-    //添加子控制器
+    //2.添加子控制器
     UITableViewController * home = [[UITableViewController alloc]init];
     [self addOneChildViewController:home withTitle:@"首页" andImageName:@"tabbar_home" andSelectedImageName:@"tabbar_home_selected"];
     
@@ -42,6 +46,7 @@
     childVC.tabBarItem.title = title;
     childVC.tabBarItem.image = [UIImage imageNamed:imageName];
     childVC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
     
     //2.添加到tabbar控制器
     [self addChildViewController:childVC];
