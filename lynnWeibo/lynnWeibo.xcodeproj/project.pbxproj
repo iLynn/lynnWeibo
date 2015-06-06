@@ -10,9 +10,9 @@
 		BA323B3B1B22CAB0001E93B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B3A1B22CAB0001E93B0 /* main.m */; };
 		BA323B491B22CAB0001E93B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */; };
 		BA323B551B22CAB0001E93B0 /* lynnWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B541B22CAB0001E93B0 /* lynnWeiboTests.m */; };
+		BA60DBC11B22F2D100875415 /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA60DBBA1B22F2D100875415 /* LYTabBarController.m */; };
+		BA60DBC21B22F2D100875415 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA60DBBF1B22F2D100875415 /* AppDelegate.m */; };
 		BA8E70041B22DAA1005677DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8E70031B22DAA1005677DF /* Images.xcassets */; };
-		BA8E70101B22ECE5005677DF /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8E70091B22ECE5005677DF /* LYTabBarController.m */; };
-		BA8E70111B22ECE5005677DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8E700D1B22ECE5005677DF /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,12 +33,12 @@
 		BA323B4E1B22CAB0001E93B0 /* lynnWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lynnWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA323B531B22CAB0001E93B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA323B541B22CAB0001E93B0 /* lynnWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lynnWeiboTests.m; sourceTree = "<group>"; };
-		BA8E70031B22DAA1005677DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BA8E70081B22ECE5005677DF /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
-		BA8E70091B22ECE5005677DF /* LYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBarController.m; sourceTree = "<group>"; };
-		BA8E700C1B22ECE5005677DF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BA8E700D1B22ECE5005677DF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA8E70121B22EE4F005677DF /* lynnWeibo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lynnWeibo-prefix.pch"; sourceTree = "<group>"; };
+		BA60DBB91B22F2D100875415 /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
+		BA60DBBA1B22F2D100875415 /* LYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBarController.m; sourceTree = "<group>"; };
+		BA60DBBE1B22F2D100875415 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA60DBBF1B22F2D100875415 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA60DBC31B22F3C200875415 /* lynnWeibo-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lynnWeibo-prefix.pch"; sourceTree = "<group>"; };
+		BA8E70031B22DAA1005677DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = lynnWeibo/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				BA323B371B22CAB0001E93B0 /* lynnWeibo */,
+				BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */,
+				BA8E70031B22DAA1005677DF /* Images.xcassets */,
 				BA323B511B22CAB0001E93B0 /* lynnWeiboTests */,
 				BA323B361B22CAB0001E93B0 /* Products */,
 			);
@@ -81,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				BA323B901B22D531001E93B0 /* classes */,
-				BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */,
-				BA8E70031B22DAA1005677DF /* Images.xcassets */,
 				BA323B381B22CAB0001E93B0 /* Supporting Files */,
 			);
 			path = lynnWeibo;
@@ -117,7 +117,7 @@
 		BA323B901B22D531001E93B0 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E70051B22ECE5005677DF /* main */,
+				BA60DBB61B22F2D100875415 /* main */,
 				BA323B951B22D531001E93B0 /* home(首页) */,
 				BA323B9C1B22D531001E93B0 /* message(消息) */,
 				BA323B911B22D531001E93B0 /* discover(发现) */,
@@ -250,52 +250,52 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		BA8E70051B22ECE5005677DF /* main */ = {
+		BA60DBB61B22F2D100875415 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E70061B22ECE5005677DF /* category */,
-				BA8E70071B22ECE5005677DF /* controller */,
-				BA8E700A1B22ECE5005677DF /* model */,
-				BA8E700B1B22ECE5005677DF /* other */,
-				BA8E700F1B22ECE5005677DF /* view */,
+				BA60DBBD1B22F2D100875415 /* others */,
+				BA60DBB71B22F2D100875415 /* category */,
+				BA60DBB81B22F2D100875415 /* controller */,
+				BA60DBBC1B22F2D100875415 /* model */,
+				BA60DBC01B22F2D100875415 /* view */,
 			);
 			path = main;
 			sourceTree = "<group>";
 		};
-		BA8E70061B22ECE5005677DF /* category */ = {
+		BA60DBB71B22F2D100875415 /* category */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = category;
 			sourceTree = "<group>";
 		};
-		BA8E70071B22ECE5005677DF /* controller */ = {
+		BA60DBB81B22F2D100875415 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E70081B22ECE5005677DF /* LYTabBarController.h */,
-				BA8E70091B22ECE5005677DF /* LYTabBarController.m */,
+				BA60DBB91B22F2D100875415 /* LYTabBarController.h */,
+				BA60DBBA1B22F2D100875415 /* LYTabBarController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		BA8E700A1B22ECE5005677DF /* model */ = {
+		BA60DBBC1B22F2D100875415 /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		BA8E700B1B22ECE5005677DF /* other */ = {
+		BA60DBBD1B22F2D100875415 /* others */ = {
 			isa = PBXGroup;
 			children = (
-				BA8E700C1B22ECE5005677DF /* AppDelegate.h */,
-				BA8E700D1B22ECE5005677DF /* AppDelegate.m */,
-				BA8E70121B22EE4F005677DF /* lynnWeibo-prefix.pch */,
+				BA60DBBE1B22F2D100875415 /* AppDelegate.h */,
+				BA60DBBF1B22F2D100875415 /* AppDelegate.m */,
+				BA60DBC31B22F3C200875415 /* lynnWeibo-prefix.pch */,
 			);
-			path = other;
+			path = others;
 			sourceTree = "<group>";
 		};
-		BA8E700F1B22ECE5005677DF /* view */ = {
+		BA60DBC01B22F2D100875415 /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -402,9 +402,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA8E70101B22ECE5005677DF /* LYTabBarController.m in Sources */,
+				BA60DBC11B22F2D100875415 /* LYTabBarController.m in Sources */,
 				BA323B3B1B22CAB0001E93B0 /* main.m in Sources */,
-				BA8E70111B22ECE5005677DF /* AppDelegate.m in Sources */,
+				BA60DBC21B22F2D100875415 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +433,7 @@
 				BA323B481B22CAB0001E93B0 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = lynnWeibo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -526,7 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
 				INFOPLIST_FILE = lynnWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,7 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
 				INFOPLIST_FILE = lynnWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
