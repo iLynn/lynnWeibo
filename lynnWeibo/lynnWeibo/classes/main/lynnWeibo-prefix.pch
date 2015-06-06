@@ -1,0 +1,14 @@
+//
+//  lynnWeibo-prefix.pch
+//  lynnWeibo
+//
+//  Created by Lynn on 15/6/6.
+//  Copyright (c) 2015年 Lynn. All rights reserved.
+//
+
+#ifndef lynnWeibo_lynnWeibo_prefix_pch
+#define lynnWeibo_lynnWeibo_prefix_pch
+
+#define LYRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]
+
+#endif

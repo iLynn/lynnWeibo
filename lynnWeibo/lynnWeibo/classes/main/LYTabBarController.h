@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  LYTabBarController.h
 //  lynnWeibo
 //
 //  Created by Lynn on 15/6/6.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface LYTabBarController : UITabBarController
 
 @end
-

@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  lynnWeibo
+//  test
 //
 //  Created by Lynn on 15/6/6.
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "LYTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //1.创建窗口
+    self.window = [[UIWindow alloc]init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    //2.创建根控制器
+    LYTabBarController * tabBarC = [[LYTabBarController alloc]init];
+    self.window.rootViewController = tabBarC;
+    
+    //3.设置窗口可见
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
