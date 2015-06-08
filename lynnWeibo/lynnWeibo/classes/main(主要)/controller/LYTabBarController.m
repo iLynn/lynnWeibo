@@ -12,21 +12,20 @@
 #import "LYMessageTableController.h"
 #import "LYDiscoverTableController.h"
 #import "LYProfileTableController.h"
+#import "LYTabBar.h"
 
 
-@interface LYTabBarController ()
+@interface LYTabBarController ()<LYTabBarDelegate>
 
 @end
 
 @implementation LYTabBarController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    //1.选中时文字为橙色（渲染）
-    self.tabBar.tintColor = [UIColor orangeColor];
-    
-    //2.添加子控制器
+    //1.添加子控制器
     LYHomeTableController * home = [[LYHomeTableController alloc]init];
     [self addOneChildViewController:home withTitle:@"首页" andImageName:@"tabbar_home" andSelectedImageName:@"tabbar_home_selected"];
     
@@ -38,6 +37,23 @@
     
     LYProfileTableController * profile = [[LYProfileTableController alloc]init];
     [self addOneChildViewController:profile withTitle:@"我" andImageName:@"tabbar_profile" andSelectedImageName:@"tabbar_profile_selected"];
+    
+    
+    //2.不用系统自带的tabbar，改用自定义的
+    LYTabBar * customTabBar = [[LYTabBar alloc] init];
+    customTabBar.backgroundImage = [UIImage imageNamed:@"tabbar_background"];
+    customTabBar.selectionIndicatorImage = [UIImage imageNamed:@"navigationbar_button_background"];
+    
+    //4.设置代理
+    customTabBar.delegate = self;
+    
+    // 更换系统自带的tabbar：直接用KVC改掉了
+    [self setValue:customTabBar forKeyPath:@"tabBar"];
+    
+    
+    //3.选中时文字为橙色（渲染）
+    self.tabBar.tintColor = [UIColor orangeColor];
+
     
 }
 
@@ -58,6 +74,13 @@
     
     //2.添加到tabbar控制器
     [self addChildViewController:navC];
+    
+}
+
+#pragma mark - 自定义tabbar的代理方法
+
+-(void)tabBarDidClickPlusButton:(LYTabBar *)tabBar
+{
     
 }
 

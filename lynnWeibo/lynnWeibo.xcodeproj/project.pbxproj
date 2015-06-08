@@ -10,21 +10,22 @@
 		BA323B3B1B22CAB0001E93B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B3A1B22CAB0001E93B0 /* main.m */; };
 		BA323B491B22CAB0001E93B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */; };
 		BA323B551B22CAB0001E93B0 /* lynnWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B541B22CAB0001E93B0 /* lynnWeiboTests.m */; };
-		BA60DBC11B22F2D100875415 /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA60DBBA1B22F2D100875415 /* LYTabBarController.m */; };
-		BA60DBC21B22F2D100875415 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA60DBBF1B22F2D100875415 /* AppDelegate.m */; };
-		BA6198021B230205007BCB9F /* LYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198011B230205007BCB9F /* LYNavigationController.m */; };
-		BA6198051B2302F2007BCB9F /* LYHomeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198041B2302F2007BCB9F /* LYHomeTableController.m */; };
-		BA6198081B230536007BCB9F /* LYMessageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198071B230536007BCB9F /* LYMessageTableController.m */; };
-		BA61980B1B23058C007BCB9F /* LYDiscoverTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA61980A1B23058C007BCB9F /* LYDiscoverTableController.m */; };
-		BA61980E1B23059D007BCB9F /* LYProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA61980D1B23059D007BCB9F /* LYProfileTableController.m */; };
-		BA6198131B2330D4007BCB9F /* NSArray+ChineseExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198101B2330D4007BCB9F /* NSArray+ChineseExt.m */; };
-		BA6198141B2330D4007BCB9F /* UIView+ViewFrameExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */; };
-		BA6198171B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */; };
 		BA7E8FF31B23E06100A01A18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7E8FF21B23E06100A01A18 /* Images.xcassets */; };
-		BA7E8FF61B23E11400A01A18 /* UIImage+ResizeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */; };
-		BA7E8FFC1B23EF6200A01A18 /* LYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */; };
-		BA7E8FFF1B23F42300A01A18 /* LYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */; };
-		BA94335C1B25222B00CF40B1 /* LYPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */; };
+		BAE6EF431B2549D300178DBD /* LYDiscoverTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF091B2549D300178DBD /* LYDiscoverTableController.m */; };
+		BAE6EF441B2549D300178DBD /* LYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF0D1B2549D300178DBD /* LYTitleButton.m */; };
+		BAE6EF451B2549D300178DBD /* LYHomeTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF111B2549D300178DBD /* LYHomeTableController.m */; };
+		BAE6EF461B2549D300178DBD /* LYPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF131B2549D300178DBD /* LYPopMenuView.m */; };
+		BAE6EF471B2549D300178DBD /* LYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF171B2549D300178DBD /* LYSearchBar.m */; };
+		BAE6EF481B2549D300178DBD /* NSArray+ChineseExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF1B1B2549D300178DBD /* NSArray+ChineseExt.m */; };
+		BAE6EF491B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF1D1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m */; };
+		BAE6EF4A1B2549D300178DBD /* UIImage+ResizeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF1F1B2549D300178DBD /* UIImage+ResizeExt.m */; };
+		BAE6EF4B1B2549D300178DBD /* UIView+ViewFrameExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF211B2549D300178DBD /* UIView+ViewFrameExt.m */; };
+		BAE6EF4C1B2549D300178DBD /* LYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF241B2549D300178DBD /* LYNavigationController.m */; };
+		BAE6EF4D1B2549D300178DBD /* LYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF261B2549D300178DBD /* LYTabBarController.m */; };
+		BAE6EF4E1B2549D300178DBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF2A1B2549D300178DBD /* AppDelegate.m */; };
+		BAE6EF4F1B2549D300178DBD /* LYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF2E1B2549D300178DBD /* LYTabBar.m */; };
+		BAE6EF501B2549D300178DBD /* LYMessageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF321B2549D300178DBD /* LYMessageTableController.m */; };
+		BAE6EF511B2549D300178DBD /* LYProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF381B2549D300178DBD /* LYProfileTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,36 +46,38 @@
 		BA323B4E1B22CAB0001E93B0 /* lynnWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lynnWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA323B531B22CAB0001E93B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA323B541B22CAB0001E93B0 /* lynnWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lynnWeiboTests.m; sourceTree = "<group>"; };
-		BA60DBB91B22F2D100875415 /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
-		BA60DBBA1B22F2D100875415 /* LYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBarController.m; sourceTree = "<group>"; };
-		BA60DBBE1B22F2D100875415 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BA60DBBF1B22F2D100875415 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA60DBC31B22F3C200875415 /* lynnWeibo-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lynnWeibo-prefix.pch"; sourceTree = "<group>"; };
-		BA6198001B230205007BCB9F /* LYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYNavigationController.h; sourceTree = "<group>"; };
-		BA6198011B230205007BCB9F /* LYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYNavigationController.m; sourceTree = "<group>"; };
-		BA6198031B2302F2007BCB9F /* LYHomeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHomeTableController.h; sourceTree = "<group>"; };
-		BA6198041B2302F2007BCB9F /* LYHomeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHomeTableController.m; sourceTree = "<group>"; };
-		BA6198061B230536007BCB9F /* LYMessageTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMessageTableController.h; sourceTree = "<group>"; };
-		BA6198071B230536007BCB9F /* LYMessageTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMessageTableController.m; sourceTree = "<group>"; };
-		BA6198091B23058C007BCB9F /* LYDiscoverTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDiscoverTableController.h; sourceTree = "<group>"; };
-		BA61980A1B23058C007BCB9F /* LYDiscoverTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDiscoverTableController.m; sourceTree = "<group>"; };
-		BA61980C1B23059D007BCB9F /* LYProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYProfileTableController.h; sourceTree = "<group>"; };
-		BA61980D1B23059D007BCB9F /* LYProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYProfileTableController.m; sourceTree = "<group>"; };
-		BA61980F1B2330D4007BCB9F /* NSArray+ChineseExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ChineseExt.h"; sourceTree = "<group>"; };
-		BA6198101B2330D4007BCB9F /* NSArray+ChineseExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ChineseExt.m"; sourceTree = "<group>"; };
-		BA6198111B2330D4007BCB9F /* UIView+ViewFrameExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewFrameExt.h"; sourceTree = "<group>"; };
-		BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameExt.m"; sourceTree = "<group>"; };
-		BA6198151B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ButtonImageExt.h"; sourceTree = "<group>"; };
-		BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ButtonImageExt.m"; sourceTree = "<group>"; };
-		BA7E8FF21B23E06100A01A18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		BA7E8FF41B23E11400A01A18 /* UIImage+ResizeExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeExt.h"; sourceTree = "<group>"; };
-		BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeExt.m"; sourceTree = "<group>"; };
-		BA7E8FFA1B23EF6200A01A18 /* LYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSearchBar.h; sourceTree = "<group>"; };
-		BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSearchBar.m; sourceTree = "<group>"; };
-		BA7E8FFD1B23F42300A01A18 /* LYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTitleButton.h; sourceTree = "<group>"; };
-		BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTitleButton.m; sourceTree = "<group>"; };
-		BA94335A1B25222B00CF40B1 /* LYPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPopMenuView.h; sourceTree = "<group>"; };
-		BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPopMenuView.m; sourceTree = "<group>"; };
+		BA68B90C1B254ACA00547BBE /* lynnWeibo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lynnWeibo-prefix.pch"; sourceTree = "<group>"; };
+		BA7E8FF21B23E06100A01A18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = lynnWeibo/Images.xcassets; sourceTree = "<group>"; };
+		BAE6EF081B2549D300178DBD /* LYDiscoverTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDiscoverTableController.h; sourceTree = "<group>"; };
+		BAE6EF091B2549D300178DBD /* LYDiscoverTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDiscoverTableController.m; sourceTree = "<group>"; };
+		BAE6EF0C1B2549D300178DBD /* LYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTitleButton.h; sourceTree = "<group>"; };
+		BAE6EF0D1B2549D300178DBD /* LYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTitleButton.m; sourceTree = "<group>"; };
+		BAE6EF101B2549D300178DBD /* LYHomeTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHomeTableController.h; sourceTree = "<group>"; };
+		BAE6EF111B2549D300178DBD /* LYHomeTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHomeTableController.m; sourceTree = "<group>"; };
+		BAE6EF121B2549D300178DBD /* LYPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPopMenuView.h; sourceTree = "<group>"; };
+		BAE6EF131B2549D300178DBD /* LYPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPopMenuView.m; sourceTree = "<group>"; };
+		BAE6EF161B2549D300178DBD /* LYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSearchBar.h; sourceTree = "<group>"; };
+		BAE6EF171B2549D300178DBD /* LYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSearchBar.m; sourceTree = "<group>"; };
+		BAE6EF1A1B2549D300178DBD /* NSArray+ChineseExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ChineseExt.h"; sourceTree = "<group>"; };
+		BAE6EF1B1B2549D300178DBD /* NSArray+ChineseExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ChineseExt.m"; sourceTree = "<group>"; };
+		BAE6EF1C1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ButtonImageExt.h"; sourceTree = "<group>"; };
+		BAE6EF1D1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ButtonImageExt.m"; sourceTree = "<group>"; };
+		BAE6EF1E1B2549D300178DBD /* UIImage+ResizeExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeExt.h"; sourceTree = "<group>"; };
+		BAE6EF1F1B2549D300178DBD /* UIImage+ResizeExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeExt.m"; sourceTree = "<group>"; };
+		BAE6EF201B2549D300178DBD /* UIView+ViewFrameExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewFrameExt.h"; sourceTree = "<group>"; };
+		BAE6EF211B2549D300178DBD /* UIView+ViewFrameExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameExt.m"; sourceTree = "<group>"; };
+		BAE6EF231B2549D300178DBD /* LYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYNavigationController.h; sourceTree = "<group>"; };
+		BAE6EF241B2549D300178DBD /* LYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYNavigationController.m; sourceTree = "<group>"; };
+		BAE6EF251B2549D300178DBD /* LYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBarController.h; sourceTree = "<group>"; };
+		BAE6EF261B2549D300178DBD /* LYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBarController.m; sourceTree = "<group>"; };
+		BAE6EF291B2549D300178DBD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BAE6EF2A1B2549D300178DBD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BAE6EF2D1B2549D300178DBD /* LYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTabBar.h; sourceTree = "<group>"; };
+		BAE6EF2E1B2549D300178DBD /* LYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTabBar.m; sourceTree = "<group>"; };
+		BAE6EF311B2549D300178DBD /* LYMessageTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMessageTableController.h; sourceTree = "<group>"; };
+		BAE6EF321B2549D300178DBD /* LYMessageTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMessageTableController.m; sourceTree = "<group>"; };
+		BAE6EF371B2549D300178DBD /* LYProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYProfileTableController.h; sourceTree = "<group>"; };
+		BAE6EF381B2549D300178DBD /* LYProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYProfileTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				BA323B371B22CAB0001E93B0 /* lynnWeibo */,
+				BA7E8FF21B23E06100A01A18 /* Images.xcassets */,
+				BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */,
 				BA323B511B22CAB0001E93B0 /* lynnWeiboTests */,
 				BA323B361B22CAB0001E93B0 /* Products */,
 			);
@@ -116,9 +121,7 @@
 		BA323B371B22CAB0001E93B0 /* lynnWeibo */ = {
 			isa = PBXGroup;
 			children = (
-				BA323B901B22D531001E93B0 /* classes */,
-				BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */,
-				BA7E8FF21B23E06100A01A18 /* Images.xcassets */,
+				BAE6EF051B2549D300178DBD /* classes */,
 				BA323B381B22CAB0001E93B0 /* Supporting Files */,
 			);
 			path = lynnWeibo;
@@ -150,212 +153,278 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BA323B901B22D531001E93B0 /* classes */ = {
+		BAE6EF051B2549D300178DBD /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				BA60DBB61B22F2D100875415 /* main */,
-				BA323B951B22D531001E93B0 /* home(首页) */,
-				BA323B9C1B22D531001E93B0 /* message(消息) */,
-				BA323B911B22D531001E93B0 /* discover(发现) */,
-				BA323BA01B22D531001E93B0 /* profile(我) */,
+				BAE6EF061B2549D300178DBD /* discover(发现) */,
+				BAE6EF0E1B2549D300178DBD /* home(首页) */,
+				BAE6EF181B2549D300178DBD /* main(主要) */,
+				BAE6EF2F1B2549D300178DBD /* message(消息) */,
+				BAE6EF351B2549D300178DBD /* profile(我) */,
+				BAE6EF3B1B2549D300178DBD /* temp */,
+				BAE6EF3F1B2549D300178DBD /* write(发微博) */,
 			);
 			path = classes;
 			sourceTree = "<group>";
 		};
-		BA323B911B22D531001E93B0 /* discover(发现) */ = {
+		BAE6EF061B2549D300178DBD /* discover(发现) */ = {
 			isa = PBXGroup;
 			children = (
-				BA323B921B22D531001E93B0 /* controller */,
-				BA323B931B22D531001E93B0 /* model */,
-				BA323B941B22D531001E93B0 /* view */,
+				BAE6EF071B2549D300178DBD /* controller */,
+				BAE6EF0A1B2549D300178DBD /* model */,
+				BAE6EF0B1B2549D300178DBD /* view */,
 			);
 			path = "discover(发现)";
 			sourceTree = "<group>";
 		};
-		BA323B921B22D531001E93B0 /* controller */ = {
+		BAE6EF071B2549D300178DBD /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA6198091B23058C007BCB9F /* LYDiscoverTableController.h */,
-				BA61980A1B23058C007BCB9F /* LYDiscoverTableController.m */,
+				BAE6EF081B2549D300178DBD /* LYDiscoverTableController.h */,
+				BAE6EF091B2549D300178DBD /* LYDiscoverTableController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		BA323B931B22D531001E93B0 /* model */ = {
+		BAE6EF0A1B2549D300178DBD /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		BA323B941B22D531001E93B0 /* view */ = {
+		BAE6EF0B1B2549D300178DBD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				BA7E8FFA1B23EF6200A01A18 /* LYSearchBar.h */,
-				BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */,
+				BAE6EF0C1B2549D300178DBD /* LYTitleButton.h */,
+				BAE6EF0D1B2549D300178DBD /* LYTitleButton.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		BA323B951B22D531001E93B0 /* home(首页) */ = {
+		BAE6EF0E1B2549D300178DBD /* home(首页) */ = {
 			isa = PBXGroup;
 			children = (
-				BA323B961B22D531001E93B0 /* controller */,
-				BA323B971B22D531001E93B0 /* model */,
-				BA323B981B22D531001E93B0 /* view */,
+				BAE6EF0F1B2549D300178DBD /* controller */,
+				BAE6EF141B2549D300178DBD /* model */,
+				BAE6EF151B2549D300178DBD /* view */,
 			);
 			path = "home(首页)";
 			sourceTree = "<group>";
 		};
-		BA323B961B22D531001E93B0 /* controller */ = {
+		BAE6EF0F1B2549D300178DBD /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA6198031B2302F2007BCB9F /* LYHomeTableController.h */,
-				BA6198041B2302F2007BCB9F /* LYHomeTableController.m */,
+				BAE6EF101B2549D300178DBD /* LYHomeTableController.h */,
+				BAE6EF111B2549D300178DBD /* LYHomeTableController.m */,
+				BAE6EF121B2549D300178DBD /* LYPopMenuView.h */,
+				BAE6EF131B2549D300178DBD /* LYPopMenuView.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		BA323B971B22D531001E93B0 /* model */ = {
+		BAE6EF141B2549D300178DBD /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		BA323B981B22D531001E93B0 /* view */ = {
+		BAE6EF151B2549D300178DBD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				BA7E8FFD1B23F42300A01A18 /* LYTitleButton.h */,
-				BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */,
-				BA94335A1B25222B00CF40B1 /* LYPopMenuView.h */,
-				BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */,
+				BAE6EF161B2549D300178DBD /* LYSearchBar.h */,
+				BAE6EF171B2549D300178DBD /* LYSearchBar.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		BA323B9C1B22D531001E93B0 /* message(消息) */ = {
+		BAE6EF181B2549D300178DBD /* main(主要) */ = {
 			isa = PBXGroup;
 			children = (
-				BA323B9D1B22D531001E93B0 /* controller */,
-				BA323B9E1B22D531001E93B0 /* model */,
-				BA323B9F1B22D531001E93B0 /* view */,
+				BAE6EF191B2549D300178DBD /* category */,
+				BAE6EF221B2549D300178DBD /* controller */,
+				BAE6EF271B2549D300178DBD /* model */,
+				BAE6EF281B2549D300178DBD /* other */,
+				BAE6EF2C1B2549D300178DBD /* view */,
 			);
-			path = "message(消息)";
+			path = "main(主要)";
 			sourceTree = "<group>";
 		};
-		BA323B9D1B22D531001E93B0 /* controller */ = {
+		BAE6EF191B2549D300178DBD /* category */ = {
 			isa = PBXGroup;
 			children = (
-				BA6198061B230536007BCB9F /* LYMessageTableController.h */,
-				BA6198071B230536007BCB9F /* LYMessageTableController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		BA323B9E1B22D531001E93B0 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		BA323B9F1B22D531001E93B0 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		BA323BA01B22D531001E93B0 /* profile(我) */ = {
-			isa = PBXGroup;
-			children = (
-				BA323BA11B22D531001E93B0 /* controller */,
-				BA323BA21B22D531001E93B0 /* model */,
-				BA323BA31B22D531001E93B0 /* view */,
-			);
-			path = "profile(我)";
-			sourceTree = "<group>";
-		};
-		BA323BA11B22D531001E93B0 /* controller */ = {
-			isa = PBXGroup;
-			children = (
-				BA61980C1B23059D007BCB9F /* LYProfileTableController.h */,
-				BA61980D1B23059D007BCB9F /* LYProfileTableController.m */,
-			);
-			path = controller;
-			sourceTree = "<group>";
-		};
-		BA323BA21B22D531001E93B0 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		BA323BA31B22D531001E93B0 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		BA60DBB61B22F2D100875415 /* main */ = {
-			isa = PBXGroup;
-			children = (
-				BA60DBBD1B22F2D100875415 /* others */,
-				BA60DBB71B22F2D100875415 /* category */,
-				BA60DBB81B22F2D100875415 /* controller */,
-				BA60DBBC1B22F2D100875415 /* model */,
-				BA60DBC01B22F2D100875415 /* view */,
-			);
-			path = main;
-			sourceTree = "<group>";
-		};
-		BA60DBB71B22F2D100875415 /* category */ = {
-			isa = PBXGroup;
-			children = (
-				BA61980F1B2330D4007BCB9F /* NSArray+ChineseExt.h */,
-				BA6198101B2330D4007BCB9F /* NSArray+ChineseExt.m */,
-				BA6198111B2330D4007BCB9F /* UIView+ViewFrameExt.h */,
-				BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */,
-				BA6198151B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.h */,
-				BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */,
-				BA7E8FF41B23E11400A01A18 /* UIImage+ResizeExt.h */,
-				BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */,
+				BAE6EF1A1B2549D300178DBD /* NSArray+ChineseExt.h */,
+				BAE6EF1B1B2549D300178DBD /* NSArray+ChineseExt.m */,
+				BAE6EF1C1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.h */,
+				BAE6EF1D1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m */,
+				BAE6EF1E1B2549D300178DBD /* UIImage+ResizeExt.h */,
+				BAE6EF1F1B2549D300178DBD /* UIImage+ResizeExt.m */,
+				BAE6EF201B2549D300178DBD /* UIView+ViewFrameExt.h */,
+				BAE6EF211B2549D300178DBD /* UIView+ViewFrameExt.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
 		};
-		BA60DBB81B22F2D100875415 /* controller */ = {
+		BAE6EF221B2549D300178DBD /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				BA60DBB91B22F2D100875415 /* LYTabBarController.h */,
-				BA60DBBA1B22F2D100875415 /* LYTabBarController.m */,
-				BA6198001B230205007BCB9F /* LYNavigationController.h */,
-				BA6198011B230205007BCB9F /* LYNavigationController.m */,
+				BAE6EF231B2549D300178DBD /* LYNavigationController.h */,
+				BAE6EF241B2549D300178DBD /* LYNavigationController.m */,
+				BAE6EF251B2549D300178DBD /* LYTabBarController.h */,
+				BAE6EF261B2549D300178DBD /* LYTabBarController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
 		};
-		BA60DBBC1B22F2D100875415 /* model */ = {
+		BAE6EF271B2549D300178DBD /* model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		BA60DBBD1B22F2D100875415 /* others */ = {
+		BAE6EF281B2549D300178DBD /* other */ = {
 			isa = PBXGroup;
 			children = (
-				BA60DBBE1B22F2D100875415 /* AppDelegate.h */,
-				BA60DBBF1B22F2D100875415 /* AppDelegate.m */,
-				BA60DBC31B22F3C200875415 /* lynnWeibo-prefix.pch */,
+				BAE6EF291B2549D300178DBD /* AppDelegate.h */,
+				BAE6EF2A1B2549D300178DBD /* AppDelegate.m */,
+				BA68B90C1B254ACA00547BBE /* lynnWeibo-prefix.pch */,
 			);
-			path = others;
+			path = other;
 			sourceTree = "<group>";
 		};
-		BA60DBC01B22F2D100875415 /* view */ = {
+		BAE6EF2C1B2549D300178DBD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF2D1B2549D300178DBD /* LYTabBar.h */,
+				BAE6EF2E1B2549D300178DBD /* LYTabBar.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BAE6EF2F1B2549D300178DBD /* message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF301B2549D300178DBD /* controller */,
+				BAE6EF331B2549D300178DBD /* model */,
+				BAE6EF341B2549D300178DBD /* view */,
+			);
+			path = "message(消息)";
+			sourceTree = "<group>";
+		};
+		BAE6EF301B2549D300178DBD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF311B2549D300178DBD /* LYMessageTableController.h */,
+				BAE6EF321B2549D300178DBD /* LYMessageTableController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BAE6EF331B2549D300178DBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BAE6EF341B2549D300178DBD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BAE6EF351B2549D300178DBD /* profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF361B2549D300178DBD /* controller */,
+				BAE6EF391B2549D300178DBD /* model */,
+				BAE6EF3A1B2549D300178DBD /* view */,
+			);
+			path = "profile(我)";
+			sourceTree = "<group>";
+		};
+		BAE6EF361B2549D300178DBD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF371B2549D300178DBD /* LYProfileTableController.h */,
+				BAE6EF381B2549D300178DBD /* LYProfileTableController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BAE6EF391B2549D300178DBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BAE6EF3A1B2549D300178DBD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BAE6EF3B1B2549D300178DBD /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF3C1B2549D300178DBD /* controller */,
+				BAE6EF3D1B2549D300178DBD /* model */,
+				BAE6EF3E1B2549D300178DBD /* view */,
+			);
+			path = temp;
+			sourceTree = "<group>";
+		};
+		BAE6EF3C1B2549D300178DBD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BAE6EF3D1B2549D300178DBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BAE6EF3E1B2549D300178DBD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BAE6EF3F1B2549D300178DBD /* write(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				BAE6EF401B2549D300178DBD /* controller */,
+				BAE6EF411B2549D300178DBD /* model */,
+				BAE6EF421B2549D300178DBD /* view */,
+			);
+			path = "write(发微博)";
+			sourceTree = "<group>";
+		};
+		BAE6EF401B2549D300178DBD /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		BAE6EF411B2549D300178DBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BAE6EF421B2549D300178DBD /* view */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -462,21 +531,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7E8FFC1B23EF6200A01A18 /* LYSearchBar.m in Sources */,
-				BA61980B1B23058C007BCB9F /* LYDiscoverTableController.m in Sources */,
-				BA7E8FF61B23E11400A01A18 /* UIImage+ResizeExt.m in Sources */,
-				BA94335C1B25222B00CF40B1 /* LYPopMenuView.m in Sources */,
-				BA6198021B230205007BCB9F /* LYNavigationController.m in Sources */,
-				BA60DBC11B22F2D100875415 /* LYTabBarController.m in Sources */,
-				BA7E8FFF1B23F42300A01A18 /* LYTitleButton.m in Sources */,
-				BA6198131B2330D4007BCB9F /* NSArray+ChineseExt.m in Sources */,
+				BAE6EF491B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m in Sources */,
+				BAE6EF481B2549D300178DBD /* NSArray+ChineseExt.m in Sources */,
+				BAE6EF501B2549D300178DBD /* LYMessageTableController.m in Sources */,
+				BAE6EF4C1B2549D300178DBD /* LYNavigationController.m in Sources */,
+				BAE6EF451B2549D300178DBD /* LYHomeTableController.m in Sources */,
+				BAE6EF4D1B2549D300178DBD /* LYTabBarController.m in Sources */,
+				BAE6EF441B2549D300178DBD /* LYTitleButton.m in Sources */,
+				BAE6EF511B2549D300178DBD /* LYProfileTableController.m in Sources */,
+				BAE6EF431B2549D300178DBD /* LYDiscoverTableController.m in Sources */,
+				BAE6EF4E1B2549D300178DBD /* AppDelegate.m in Sources */,
+				BAE6EF461B2549D300178DBD /* LYPopMenuView.m in Sources */,
+				BAE6EF471B2549D300178DBD /* LYSearchBar.m in Sources */,
+				BAE6EF4F1B2549D300178DBD /* LYTabBar.m in Sources */,
+				BAE6EF4B1B2549D300178DBD /* UIView+ViewFrameExt.m in Sources */,
+				BAE6EF4A1B2549D300178DBD /* UIImage+ResizeExt.m in Sources */,
 				BA323B3B1B22CAB0001E93B0 /* main.m in Sources */,
-				BA60DBC21B22F2D100875415 /* AppDelegate.m in Sources */,
-				BA6198051B2302F2007BCB9F /* LYHomeTableController.m in Sources */,
-				BA6198171B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m in Sources */,
-				BA6198141B2330D4007BCB9F /* UIView+ViewFrameExt.m in Sources */,
-				BA6198081B230536007BCB9F /* LYMessageTableController.m in Sources */,
-				BA61980E1B23059D007BCB9F /* LYProfileTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +575,7 @@
 				BA323B481B22CAB0001E93B0 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = lynnWeibo;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -535,7 +606,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -579,7 +650,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -598,7 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				INFOPLIST_FILE = lynnWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -609,7 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				INFOPLIST_FILE = lynnWeibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,7 +695,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -644,7 +715,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/others/lynnWeibo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/lynnWeibo/classes/main/other/lynnWeibo-prefix.pch";
 				INFOPLIST_FILE = lynnWeiboTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -16,7 +16,8 @@
 
 @implementation LYHomeTableController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     LYLog(@"LYHomeTableController--viewDidLoad");
@@ -71,10 +72,12 @@
 }
 
 
-#pragma mark - 弹出菜单协议
+#pragma mark - 自定义弹出menuView的代理方法
+
 - (void)popMenuViewDidDismissed:(LYPopMenuView *)popMenuView
 {
     LYTitleButton * titleButton = (LYTitleButton *)self.navigationItem.titleView;
+    
     [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
 }
 
