@@ -20,7 +20,11 @@
 		BA6198131B2330D4007BCB9F /* NSArray+ChineseExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198101B2330D4007BCB9F /* NSArray+ChineseExt.m */; };
 		BA6198141B2330D4007BCB9F /* UIView+ViewFrameExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */; };
 		BA6198171B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */; };
-		BA8E70041B22DAA1005677DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8E70031B22DAA1005677DF /* Images.xcassets */; };
+		BA7E8FF31B23E06100A01A18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7E8FF21B23E06100A01A18 /* Images.xcassets */; };
+		BA7E8FF61B23E11400A01A18 /* UIImage+ResizeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */; };
+		BA7E8FFC1B23EF6200A01A18 /* LYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */; };
+		BA7E8FFF1B23F42300A01A18 /* LYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */; };
+		BA94335C1B25222B00CF40B1 /* LYPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +66,15 @@
 		BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewFrameExt.m"; sourceTree = "<group>"; };
 		BA6198151B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+ButtonImageExt.h"; sourceTree = "<group>"; };
 		BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+ButtonImageExt.m"; sourceTree = "<group>"; };
-		BA8E70031B22DAA1005677DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA7E8FF21B23E06100A01A18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA7E8FF41B23E11400A01A18 /* UIImage+ResizeExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeExt.h"; sourceTree = "<group>"; };
+		BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeExt.m"; sourceTree = "<group>"; };
+		BA7E8FFA1B23EF6200A01A18 /* LYSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSearchBar.h; sourceTree = "<group>"; };
+		BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSearchBar.m; sourceTree = "<group>"; };
+		BA7E8FFD1B23F42300A01A18 /* LYTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTitleButton.h; sourceTree = "<group>"; };
+		BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTitleButton.m; sourceTree = "<group>"; };
+		BA94335A1B25222B00CF40B1 /* LYPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPopMenuView.h; sourceTree = "<group>"; };
+		BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPopMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +118,7 @@
 			children = (
 				BA323B901B22D531001E93B0 /* classes */,
 				BA323B471B22CAB0001E93B0 /* LaunchScreen.xib */,
-				BA8E70031B22DAA1005677DF /* Images.xcassets */,
+				BA7E8FF21B23E06100A01A18 /* Images.xcassets */,
 				BA323B381B22CAB0001E93B0 /* Supporting Files */,
 			);
 			path = lynnWeibo;
@@ -179,6 +191,8 @@
 		BA323B941B22D531001E93B0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BA7E8FFA1B23EF6200A01A18 /* LYSearchBar.h */,
+				BA7E8FFB1B23EF6200A01A18 /* LYSearchBar.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -212,6 +226,10 @@
 		BA323B981B22D531001E93B0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BA7E8FFD1B23F42300A01A18 /* LYTitleButton.h */,
+				BA7E8FFE1B23F42300A01A18 /* LYTitleButton.m */,
+				BA94335A1B25222B00CF40B1 /* LYPopMenuView.h */,
+				BA94335B1B25222B00CF40B1 /* LYPopMenuView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -303,6 +321,8 @@
 				BA6198121B2330D4007BCB9F /* UIView+ViewFrameExt.m */,
 				BA6198151B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.h */,
 				BA6198161B2334AB007BCB9F /* UIBarButtonItem+ButtonImageExt.m */,
+				BA7E8FF41B23E11400A01A18 /* UIImage+ResizeExt.h */,
+				BA7E8FF51B23E11400A01A18 /* UIImage+ResizeExt.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -424,7 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA323B491B22CAB0001E93B0 /* LaunchScreen.xib in Resources */,
-				BA8E70041B22DAA1005677DF /* Images.xcassets in Resources */,
+				BA7E8FF31B23E06100A01A18 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7E8FFC1B23EF6200A01A18 /* LYSearchBar.m in Sources */,
 				BA61980B1B23058C007BCB9F /* LYDiscoverTableController.m in Sources */,
+				BA7E8FF61B23E11400A01A18 /* UIImage+ResizeExt.m in Sources */,
+				BA94335C1B25222B00CF40B1 /* LYPopMenuView.m in Sources */,
 				BA6198021B230205007BCB9F /* LYNavigationController.m in Sources */,
 				BA60DBC11B22F2D100875415 /* LYTabBarController.m in Sources */,
+				BA7E8FFF1B23F42300A01A18 /* LYTitleButton.m in Sources */,
 				BA6198131B2330D4007BCB9F /* NSArray+ChineseExt.m in Sources */,
 				BA323B3B1B22CAB0001E93B0 /* main.m in Sources */,
 				BA60DBC21B22F2D100875415 /* AppDelegate.m in Sources */,

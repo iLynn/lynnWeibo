@@ -7,6 +7,7 @@
 //
 
 #import "LYDiscoverTableController.h"
+#import "LYSearchBar.h"
 
 @interface LYDiscoverTableController ()
 
@@ -18,6 +19,15 @@
     [super viewDidLoad];
     
     LYLog(@"LYProfileTableController--viewDidLoad");
+    
+    LYSearchBar * searchBar = [LYSearchBar searchBar];
+    
+    searchBar.width = 400;
+    
+    searchBar.height = 30;
+    
+    //设置成导航栏
+    self.navigationItem.titleView = searchBar;
     
     
 }

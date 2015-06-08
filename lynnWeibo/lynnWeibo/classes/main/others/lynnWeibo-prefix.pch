@@ -13,9 +13,14 @@
 #import "NSArray+ChineseExt.h"
 #import "UIView+ViewFrameExt.h"
 #import "UIBarButtonItem+ButtonImageExt.h"
+#import "UIImage+ResizeExt.h"
 
-//2.随机色
+//2.1.随机色
 #define LYRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1.0]
+
+//2.2.导航条的字体
+#define LYNavigationFont [UIFont boldSystemFontOfSize:20]
+#define LYNavigationColor [UIColor blackColor]
 
 //3.是否打印：当调试状态（debug）时，打印；当发布状态（release）时，不打印
 #ifdef DEBUG

@@ -7,8 +7,10 @@
 //
 
 #import "LYHomeTableController.h"
+#import "LYTitleButton.h"
+#import "LYPopMenuView.h"
 
-@interface LYHomeTableController ()
+@interface LYHomeTableController ()<LYPopMenuViewDelegate>
 
 @end
 
@@ -17,12 +19,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    LYLog(@"LYHomeTableController--viewDidLoad");
+    
+    //1.添加左右两边的导航按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"navigationbar_friendsearch" andSelectedImageName:@"navigationbar_friendsearch_highlighted" andTarget:self andAction:@selector(searchFriend)];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem buttonItemWithImageName:@"navigationbar_pop" andSelectedImageName:@"navigationbar_pop_highlighted" andTarget:self andAction:@selector(pop)];
     
     
-    LYLog(@"LYHomeTableController--viewDidLoad");
+    //2.添加中间的导航标题
+    LYTitleButton * titleView = [LYTitleButton titleButton];
+    //[titleView setBackgroundImage:[UIImage resizedImage:@"more"] forState:UIControlStateHighlighted];
+    
+    [titleView setTitle:@"首页" forState:UIControlStateNormal];
+
+    [titleView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    
+    titleView.width = 100;
+    titleView.height = 35;
+    
+    //3.监听标题的点击事件
+    [titleView addTarget:self action:@selector(titleButtonTouch:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = titleView;
+    
+}
+
+-(void)titleButtonTouch:(LYTitleButton *)titleView
+{
+    [titleView setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
+    
+    // 弹出菜单
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    button.backgroundColor = [UIColor redColor];
+    
+    LYPopMenuView * menuView = [[LYPopMenuView alloc] initWithContentView:button];
+    menuView.delegate = self;
+    menuView.arrowPosition = LYPopMenuViewArrowPositionLeft;
+    [menuView showViewInRect:CGRectMake(100, 100, 100, 100)];
     
 }
 
@@ -36,6 +70,13 @@
     LYLog(@"%s", __func__);
 }
 
+
+#pragma mark - 弹出菜单协议
+- (void)popMenuViewDidDismissed:(LYPopMenuView *)popMenuView
+{
+    LYTitleButton * titleButton = (LYTitleButton *)self.navigationItem.titleView;
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+}
 
 #pragma mark - Table view data source
 

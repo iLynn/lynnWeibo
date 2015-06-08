@@ -19,6 +19,34 @@
  */
 +(void)initialize
 {
+    //设置UINavigationBar的主题
+    [self setNavigationBarTheme];
+    
+    //设置UIBarButtonItem的主题
+    [self setUIBarButtonTheme];
+    
+}
+
+/**
+ *  设置UINavigationBar的主题
+ */
++ (void)setNavigationBarTheme
+{
+    UINavigationBar * barApperence = [UINavigationBar appearance];
+    
+    //设置文字属性
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    dict[NSForegroundColorAttributeName] = LYNavigationColor;
+    dict[NSFontAttributeName] = LYNavigationFont;
+    
+    [barApperence setTitleTextAttributes:dict];
+}
+
+/**
+ *  设置UIBarButtonItem的主题
+ */
++ (void)setUIBarButtonTheme
+{
     //appearence一次设置，全局可用！
     
     //通过appearence对象设置整个项目中所有UIBarButtonItem的样式
@@ -41,7 +69,6 @@
     disableDict[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
     disableDict[NSFontAttributeName] = [UIFont systemFontOfSize:15];
     [itemAppearence setTitleTextAttributes:disableDict forState:UIControlStateDisabled];
-    
 }
 
 - (void)viewDidLoad {
