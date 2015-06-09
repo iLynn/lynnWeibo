@@ -1,14 +1,18 @@
 //
 //  AppDelegate.m
-//  test
+//  lynnWeibo
 //
 //  Created by Lynn on 15/6/6.
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "LYTabBarController.h"
-#import "LYIntroController.h"
+#import "LYOAuthSinaController.h"
+#import "LYControllerTool.h"
+#import "LYAccountTool.h"
+#import "LYSinaAccount.h"
+#import "SDImageCache.h"
+#import "SDWebImageManager.h"
 
 @interface AppDelegate ()
 
@@ -24,32 +28,40 @@
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    //2.创建根控制器
-    //2.1.判断版本号
-    static NSString * versionKey = @"CFBundleVersion";
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSString * lastVersion = [defaults objectForKey:versionKey];
-    
-    NSString * currentVersion = [NSBundle mainBundle].infoDictionary[versionKey];
-    
-    if ([currentVersion isEqualToString:lastVersion])
-    {
-        self.window.rootViewController = [[LYTabBarController alloc] init];
-    }
-    else
-    {
-        self.window.rootViewController = [[LYIntroController alloc] init];
-        
-        //2.2.保存到本地
-        [defaults setObject:currentVersion forKey:versionKey];
-        [defaults synchronize];
-        
-    }
-    
-    //3.设置窗口可见
+    //2.设置窗口可见
     [self.window makeKeyAndVisible];
     
+    //3.设置窗口的根控制器
+    LYSinaAccount * account = [LYAccountTool account];
+    
+    //曾经登录过：判断版本情况，选择跟控制器
+    if (account)
+    {
+        [LYControllerTool chooseRootViewController];
+    }
+    //没有登录过：先做授权
+    else
+    {
+        self.window.rootViewController = [[LYOAuthSinaController alloc] init];
+    }
+    
     return YES;
+    
+}
+
+/**
+ *  当收到内存警告时，清除图片
+ *
+ *  @param application <#application description#>
+ */
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    //1.清除图片
+    [[SDImageCache sharedImageCache] clearMemory];
+    
+    //2.停止正在下载的图片的操作
+    [[SDWebImageManager sharedManager] cancelAll];
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

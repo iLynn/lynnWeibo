@@ -1,9 +1,9 @@
 //
 //  UIView+ViewFrameExt.h
-//  UI-day3
+//  lynnWeibo
 //
-//  Created by qianfeng on 15-4-15.
-//  Copyright (c) 2015年 李颖. All rights reserved.
+//  Created by Lynn on 15/6/7.
+//  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
