@@ -52,12 +52,13 @@
     
     // 弹出菜单
     UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    button.backgroundColor = [UIColor redColor];
+    button.backgroundColor = [UIColor lightGrayColor];
     
     LYPopMenuView * menuView = [[LYPopMenuView alloc] initWithContentView:button];
     menuView.delegate = self;
-    menuView.arrowPosition = LYPopMenuViewArrowPositionLeft;
-    [menuView showViewInRect:CGRectMake(100, 100, 100, 100)];
+    menuView.dimBackground = YES;
+    menuView.arrowPosition = LYPopMenuViewArrowPositionCenter;
+    [menuView showViewInRect:CGRectMake(self.view.width/2 - 100, 64, 200, 300)];
     
 }
 

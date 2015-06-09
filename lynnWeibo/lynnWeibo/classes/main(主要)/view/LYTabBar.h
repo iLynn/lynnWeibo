@@ -17,6 +17,6 @@
 
 @interface LYTabBar : UITabBar
 
-@property (nonatomic, strong)id<LYTabBarDelegate> delegate;
+@property (nonatomic, strong)id<LYTabBarDelegate> lydelegate;
 
 @end

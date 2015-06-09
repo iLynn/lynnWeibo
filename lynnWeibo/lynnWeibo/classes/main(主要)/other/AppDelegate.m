@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LYTabBarController.h"
+#import "LYIntroController.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +25,26 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //2.创建根控制器
-    LYTabBarController * tabBarC = [[LYTabBarController alloc]init];
-    self.window.rootViewController = tabBarC;
+    //2.1.判断版本号
+    static NSString * versionKey = @"CFBundleVersion";
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSString * lastVersion = [defaults objectForKey:versionKey];
+    
+    NSString * currentVersion = [NSBundle mainBundle].infoDictionary[versionKey];
+    
+    if ([currentVersion isEqualToString:lastVersion])
+    {
+        self.window.rootViewController = [[LYTabBarController alloc] init];
+    }
+    else
+    {
+        self.window.rootViewController = [[LYIntroController alloc] init];
+        
+        //2.2.保存到本地
+        [defaults setObject:currentVersion forKey:versionKey];
+        [defaults synchronize];
+        
+    }
     
     //3.设置窗口可见
     [self.window makeKeyAndVisible];

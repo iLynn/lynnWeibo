@@ -96,13 +96,14 @@
     if (dimBackground)
     {
         self.coverBtn.backgroundColor = [UIColor blackColor];
-        self.coverBtn.alpha = 0.3;
+        self.coverBtn.alpha = 0.2;
     }
     else
     {
         self.coverBtn.backgroundColor = [UIColor clearColor];
         self.coverBtn.alpha = 1.0;
     }
+
 }
 
 - (void)setArrowPosition:(LYPopMenuViewArrowPosition)arrowPosition

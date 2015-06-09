@@ -10,15 +10,18 @@
 
 @interface UIView (ViewFrameExt)
 
-//直接赋值坐标的x和y
+//直接赋值view的point
 @property(nonatomic, assign)CGFloat x;
 @property(nonatomic, assign)CGFloat y;
-//直接赋值坐标点(x,y)
 @property(nonatomic, assign)CGPoint origin;
 
+//直接赋值view的size
 @property(nonatomic, assign)CGFloat width;
 @property(nonatomic, assign)CGFloat height;
 @property(nonatomic, assign)CGSize size;
 
+//通过中点定位view
+@property(nonatomic, assign)CGFloat centerX;
+@property(nonatomic, assign)CGFloat centerY;
 
 @end

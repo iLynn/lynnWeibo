@@ -13,6 +13,7 @@
 #import "LYDiscoverTableController.h"
 #import "LYProfileTableController.h"
 #import "LYTabBar.h"
+#import "LYWriteViewController.h"
 
 
 @interface LYTabBarController ()<LYTabBarDelegate>
@@ -45,7 +46,7 @@
     customTabBar.selectionIndicatorImage = [UIImage imageNamed:@"navigationbar_button_background"];
     
     //4.设置代理
-    customTabBar.delegate = self;
+    customTabBar.lydelegate = self;
     
     // 更换系统自带的tabbar：直接用KVC改掉了
     [self setValue:customTabBar forKeyPath:@"tabBar"];
@@ -81,7 +82,10 @@
 
 -(void)tabBarDidClickPlusButton:(LYTabBar *)tabBar
 {
+    LYWriteViewController * write = [[LYWriteViewController alloc]init];
+    LYNavigationController * navC = [[LYNavigationController alloc]initWithRootViewController:write];
     
+    [self presentViewController:navC animated:YES completion:nil];
 }
 
 @end

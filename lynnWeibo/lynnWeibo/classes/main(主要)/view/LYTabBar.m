@@ -49,9 +49,9 @@
     LYLog(@"plusClick----");
     
     //通知代理响应操作
-    if ([self.delegate respondsToSelector:@selector(tabBarDidClickPlusButton:)])
+    if ([self.lydelegate respondsToSelector:@selector(tabBarDidClickPlusButton:)])
     {
-        [self.delegate tabBarDidClickPlusButton:self];
+        [self.lydelegate tabBarDidClickPlusButton:self];
     }
 
 }
