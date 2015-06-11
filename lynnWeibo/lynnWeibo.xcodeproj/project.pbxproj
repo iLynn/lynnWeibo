@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA15B5A41B29728F005BDE9B /* LYLoadMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15B5A31B29728F005BDE9B /* LYLoadMoreFooterView.m */; };
+		BA15B5A61B2972A7005BDE9B /* LYLoadMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA15B5A51B2972A7005BDE9B /* LYLoadMoreFooterView.xib */; };
+		BA15B5A91B298C35005BDE9B /* LYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15B5A81B298C35005BDE9B /* LYTextView.m */; };
+		BA15B5AC1B29B2F0005BDE9B /* LYWritePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15B5AB1B29B2F0005BDE9B /* LYWritePhotosView.m */; };
+		BA15B5AF1B29B311005BDE9B /* LYWriteToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15B5AE1B29B311005BDE9B /* LYWriteToolBar.m */; };
 		BA323B3B1B22CAB0001E93B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B3A1B22CAB0001E93B0 /* main.m */; };
 		BA323B551B22CAB0001E93B0 /* lynnWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA323B541B22CAB0001E93B0 /* lynnWeiboTests.m */; };
 		BA3ECA071B267E5200FF7593 /* LYOAuthSinaController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA061B267E5200FF7593 /* LYOAuthSinaController.m */; };
@@ -84,6 +89,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA15B5A21B29728F005BDE9B /* LYLoadMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLoadMoreFooterView.h; sourceTree = "<group>"; };
+		BA15B5A31B29728F005BDE9B /* LYLoadMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLoadMoreFooterView.m; sourceTree = "<group>"; };
+		BA15B5A51B2972A7005BDE9B /* LYLoadMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYLoadMoreFooterView.xib; sourceTree = "<group>"; };
+		BA15B5A71B298C35005BDE9B /* LYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTextView.h; sourceTree = "<group>"; };
+		BA15B5A81B298C35005BDE9B /* LYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTextView.m; sourceTree = "<group>"; };
+		BA15B5AA1B29B2F0005BDE9B /* LYWritePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWritePhotosView.h; sourceTree = "<group>"; };
+		BA15B5AB1B29B2F0005BDE9B /* LYWritePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWritePhotosView.m; sourceTree = "<group>"; };
+		BA15B5AD1B29B311005BDE9B /* LYWriteToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWriteToolBar.h; sourceTree = "<group>"; };
+		BA15B5AE1B29B311005BDE9B /* LYWriteToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWriteToolBar.m; sourceTree = "<group>"; };
 		BA323B351B22CAB0001E93B0 /* lynnWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lynnWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA323B391B22CAB0001E93B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA323B3A1B22CAB0001E93B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -547,6 +561,9 @@
 				BAB2E5EE1B254FBA00157BF8 /* LYTitleButton.m */,
 				BAB2E5EB1B254FBA00157BF8 /* LYPopMenuView.h */,
 				BAB2E5EC1B254FBA00157BF8 /* LYPopMenuView.m */,
+				BA15B5A21B29728F005BDE9B /* LYLoadMoreFooterView.h */,
+				BA15B5A31B29728F005BDE9B /* LYLoadMoreFooterView.m */,
+				BA15B5A51B2972A7005BDE9B /* LYLoadMoreFooterView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -742,6 +759,12 @@
 		BAE6EF421B2549D300178DBD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BA15B5A71B298C35005BDE9B /* LYTextView.h */,
+				BA15B5A81B298C35005BDE9B /* LYTextView.m */,
+				BA15B5AD1B29B311005BDE9B /* LYWriteToolBar.h */,
+				BA15B5AE1B29B311005BDE9B /* LYWriteToolBar.m */,
+				BA15B5AA1B29B2F0005BDE9B /* LYWritePhotosView.h */,
+				BA15B5AB1B29B2F0005BDE9B /* LYWritePhotosView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -830,6 +853,7 @@
 				BAB2E5FB1B25671F00157BF8 /* LaunchScreen.xib in Resources */,
 				BA7E8FF31B23E06100A01A18 /* Images.xcassets in Resources */,
 				BA3ECA2D1B267ECC00FF7593 /* MBProgressHUD.bundle in Resources */,
+				BA15B5A61B2972A7005BDE9B /* LYLoadMoreFooterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -851,6 +875,7 @@
 				BA3ECA3E1B26EA9400FF7593 /* Foundation+Log.m in Sources */,
 				BAE6EF491B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m in Sources */,
 				BA3ECA661B26EBC500FF7593 /* SDWebImageManager.m in Sources */,
+				BA15B5A91B298C35005BDE9B /* LYTextView.m in Sources */,
 				BA3ECA8F1B272AA200FF7593 /* MJType.m in Sources */,
 				BAE6EF501B2549D300178DBD /* LYMessageTableController.m in Sources */,
 				BAB2E6021B258B1300157BF8 /* LYIntroController.m in Sources */,
@@ -860,6 +885,7 @@
 				BA3ECA6A1B26EBC500FF7593 /* UIImage+MultiFormat.m in Sources */,
 				BA3ECA8B1B272AA200FF7593 /* MJArgument.m in Sources */,
 				BA3ECA281B267ECC00FF7593 /* AFURLConnectionOperation.m in Sources */,
+				BA15B5AF1B29B311005BDE9B /* LYWriteToolBar.m in Sources */,
 				BA3ECA641B26EBC500FF7593 /* SDWebImageDownloader.m in Sources */,
 				BA3ECA271B267ECC00FF7593 /* AFSecurityPolicy.m in Sources */,
 				BA3ECA6B1B26EBC500FF7593 /* UIImage+WebP.m in Sources */,
@@ -881,6 +907,7 @@
 				BA3ECA241B267ECC00FF7593 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA3ECA691B26EBC500FF7593 /* UIImage+GIF.m in Sources */,
 				BA3ECA6D1B26EBC500FF7593 /* UIImageView+WebCache.m in Sources */,
+				BA15B5AC1B29B2F0005BDE9B /* LYWritePhotosView.m in Sources */,
 				BA3ECA8C1B272AA200FF7593 /* MJIvar.m in Sources */,
 				BAE6EF4E1B2549D300178DBD /* AppDelegate.m in Sources */,
 				BA3ECA611B26EBC500FF7593 /* SDImageCache.m in Sources */,
@@ -903,6 +930,7 @@
 				BAB2E5F01B254FBA00157BF8 /* LYTitleButton.m in Sources */,
 				BAE6EF4A1B2549D300178DBD /* UIImage+ResizeExt.m in Sources */,
 				BA3ECA071B267E5200FF7593 /* LYOAuthSinaController.m in Sources */,
+				BA15B5A41B29728F005BDE9B /* LYLoadMoreFooterView.m in Sources */,
 				BA3ECA5F1B26EBC500FF7593 /* MKAnnotationView+WebCache.m in Sources */,
 				BA3ECA701B27291800FF7593 /* LYWeiboStatus.m in Sources */,
 				BAB2E5F61B25504C00157BF8 /* LYWriteViewController.m in Sources */,
