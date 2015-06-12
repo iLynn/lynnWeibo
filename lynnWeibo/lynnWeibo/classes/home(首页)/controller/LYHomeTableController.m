@@ -9,7 +9,7 @@
 #import "LYHomeTableController.h"
 #import "LYTitleButton.h"
 #import "LYPopMenuView.h"
-#import "AFHTTPRequestOperationManager.h"
+//#import "AFHTTPRequestOperationManager.h"
 #import "LYSinaAccount.h"
 #import "LYAccountTool.h"
 #import "MBProgressHUD+LY.h"
@@ -18,6 +18,7 @@
 #import "LYWeiboStatus.h"
 #import "LYStatusUser.h"
 #import "LYLoadMoreFooterView.h"
+#import "LYHttpTool.h"
 
 
 @interface LYHomeTableController ()<LYPopMenuViewDelegate>
@@ -28,6 +29,8 @@
 @property (nonatomic, strong) NSMutableArray * statuses;
 
 @property (nonatomic, weak) LYLoadMoreFooterView *footer;
+
+@property (nonatomic, weak) LYTitleButton * titleButton;
 
 @end
 
@@ -53,13 +56,48 @@
     //1.添加导航
     [self setUpNavigationBar];
     
-    //2.加载数据
-    //[self loadNewStatus];
-    
     //2.添加下拉、上拉刷新控件
     [self setupRefresh];
     
+    //3.加载用户信息
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self setupUserInfo];
+    });
+    
 }
+
+
+/**
+ *  获得用户信息
+ */
+- (void)setupUserInfo
+{
+    //1.封装请求参数
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [LYAccountTool account].access_token;
+    params[@"uid"] = [LYAccountTool account].uid;
+    
+    //2.发送请求
+    [LYHttpTool get:@"https://api.weibo.com/2/users/show.json" params:params success:^(id responseObj) {
+         // 字典转模型
+         LYStatusUser * user = [LYStatusUser objectWithKeyValues:responseObj];
+
+         // 设置用户的昵称为标题
+         [self.titleButton setTitle:user.name forState:UIControlStateNormal];
+
+         // 存储帐号信息
+         LYSinaAccount * account = [LYAccountTool account];
+         account.name = user.name;
+
+        LYLog(@"model:%@",account.name);
+        
+         [LYAccountTool saveAccount:account];
+
+    } failure:^(NSError * error) {
+        
+    }];
+}
+
 
 /**
  *  添加下拉、上拉刷新控件
@@ -99,16 +137,35 @@
     
 }
 
+#pragma mark - 刷新
+
+- (void)refresh:(BOOL)fromSelf
+{
+    if (self.tabBarItem.badgeValue)
+    {
+        // 转圈圈
+        [self.refreshControl beginRefreshing];
+        
+        // 刷新数据
+        [self loadNewStatuses:self.refreshControl];
+        
+    }
+    else if (fromSelf)
+    {
+        // 让表格回到最顶部
+        NSIndexPath *firstRow = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:firstRow atScrollPosition:UITableViewScrollPositionTop animated:YES];
+        
+    }
+}
+
 #pragma mark - 加载微博数据
 /**
  *  加载最新的微博数据
  */
 - (void)loadNewStatuses:(UIRefreshControl *)refreshControl
 {
-    // 1.获得请求管理者
-    AFHTTPRequestOperationManager * manager = [AFHTTPRequestOperationManager manager];
-    
-    // 2.封装请求参数
+    //1.封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [LYAccountTool account].access_token;
     LYWeiboStatus * firstStatus =  [self.statuses firstObject];
@@ -117,37 +174,36 @@
         params[@"since_id"] = firstStatus.idstr;
     }
     
-    // 3.发送GET请求
-    [manager GET:@"https://api.weibo.com/2/statuses/home_timeline.json" parameters:params
-         success:^(AFHTTPRequestOperation *operation, NSDictionary *resultDict)
-     {
+    //2.发送请求
+    [LYHttpTool get:@"https://api.weibo.com/2/statuses/home_timeline.json" params:params success:^(id responseObj) {
+        
          // 微博字典数组
-         NSArray *statusDictArray = resultDict[@"statuses"];
+         NSArray * statusDictArray = responseObj[@"statuses"];
          // 微博字典数组 ---> 微博模型数组
-         NSArray *newStatuses = [LYWeiboStatus objectArrayWithKeyValuesArray:statusDictArray];
-         
+         NSArray * newStatuses = [LYWeiboStatus objectArrayWithKeyValuesArray:statusDictArray];
+
          // 将新数据插入到旧数据的最前面
          NSRange range = NSMakeRange(0, newStatuses.count);
-         NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
+         NSIndexSet * indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
          [self.statuses insertObjects:newStatuses atIndexes:indexSet];
-         
+
          // 重新刷新表格
          [self.tableView reloadData];
-         
+
          // 让刷新控件停止刷新（恢复默认的状态）
          [refreshControl endRefreshing];
          
          // 提示用户最新的微博数量
          [self showNewStatusesCount:newStatuses.count];
-         
-     }
-         failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
+        
+    } failure:^(NSError * error) {
+        
          LYLog(@"请求失败--%@", error);
-         
+
          // 让刷新控件停止刷新（恢复默认的状态）
          [refreshControl endRefreshing];
-     }];
+        
+    }];
 
 }
 
@@ -222,19 +278,25 @@
     
     
     //2.添加中间的导航标题
+    
+    // 设置导航栏中间的标题按钮
     LYTitleButton * titleView = [LYTitleButton titleButton];
-    //[titleView setBackgroundImage:[UIImage resizedImage:@""] forState:UIControlStateHighlighted];
-    
-    [titleView setTitle:@"首页" forState:UIControlStateNormal];
-    
-    [titleView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    
-    titleView.width = 100;
+    // 设置尺寸
     titleView.height = 35;
+    // 设置文字
+    NSString *name = [LYAccountTool account].name;
+    LYLog(@"%@", name);
+    
+    [titleView setTitle:name ? name : @"首页" forState:UIControlStateNormal];
+    // 设置图标
+    [titleView setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    // 设置背景
+    [titleView setBackgroundImage:[UIImage resizedImage:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
+
     
     //3.监听标题的点击事件
     [titleView addTarget:self action:@selector(titleButtonTouch:) forControlEvents:UIControlEventTouchUpInside];
-    
+    self.titleButton = titleView;
     self.navigationItem.titleView = titleView;
     
 }
@@ -311,7 +373,7 @@
     
     // 下载头像
     NSString *imageUrlStr = user.profile_image_url;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
     
     return cell;
 }
@@ -362,10 +424,7 @@
  */
 - (void)loadMoreStatuses
 {
-    // 1.获得请求管理者
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    
-    // 2.封装请求参数
+    //1.封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [LYAccountTool account].access_token;
     LYWeiboStatus * lastStatus =  [self.statuses lastObject];
@@ -374,31 +433,35 @@
         params[@"max_id"] = @([lastStatus.idstr longLongValue] - 1);
     }
     
-    // 3.发送GET请求
-    [mgr GET:@"https://api.weibo.com/2/statuses/home_timeline.json" parameters:params
-     success:^(AFHTTPRequestOperation *operation, NSDictionary *resultDict)
-    {
+    //2.发送请求
+    [LYHttpTool get:@"https://api.weibo.com/2/statuses/home_timeline.json" params:params success:^(id responseObj) {
+        
          // 微博字典数组
-         NSArray *statusDictArray = resultDict[@"statuses"];
+         NSArray *statusDictArray = responseObj[@"statuses"];
          // 微博字典数组 ---> 微博模型数组
          NSArray *newStatuses = [LYWeiboStatus objectArrayWithKeyValuesArray:statusDictArray];
-         
+
          // 将新数据插入到旧数据的最后面
          [self.statuses addObjectsFromArray:newStatuses];
-         
+
          // 重新刷新表格
          [self.tableView reloadData];
-         
+
          // 让刷新控件停止刷新（恢复默认的状态）
          [self.footer endRefreshing];
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
+        
+        // 提示用户最新的微博数量
+        [self showNewStatusesCount:newStatuses.count];
+        
+    } failure:^(NSError * error) {
+        
          LYLog(@"请求失败--%@", error);
-         
+        
          // 让刷新控件停止刷新（恢复默认的状态）
          [self.footer endRefreshing];
-     }];
+        
+    }];
+
 }
 
 

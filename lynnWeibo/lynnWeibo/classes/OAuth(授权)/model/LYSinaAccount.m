@@ -18,6 +18,9 @@
     account.expires_in = dict[@"expires_in"];
     account.uid = dict[@"uid"];
     
+    //name是单独获取，单独赋值的
+    //account.name = dict[@"name"];
+    
     // 确定帐号的过期时间 ： 帐号创建时间 + 有效期
     NSDate *now = [NSDate date];
     account.expires_time = [now dateByAddingTimeInterval:account.expires_in.doubleValue];
@@ -37,6 +40,7 @@
         self.access_token = [decoder decodeObjectForKey:@"access_token"];
         self.expires_in = [decoder decodeObjectForKey:@"expires_in"];
         self.uid = [decoder decodeObjectForKey:@"uid"];
+        self.name = [decoder decodeObjectForKey:@"name"];
         self.expires_time = [decoder decodeObjectForKey:@"expires_time"];
     }
     return self;
@@ -52,6 +56,7 @@
     [encoder encodeObject:self.access_token forKey:@"access_token"];
     [encoder encodeObject:self.expires_in forKey:@"expires_in"];
     [encoder encodeObject:self.uid forKey:@"uid"];
+    [encoder encodeObject:self.name forKey:@"name"];
     [encoder encodeObject:self.expires_time forKey:@"expires_time"];
     
 }

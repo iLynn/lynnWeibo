@@ -24,6 +24,11 @@
 /** 过期时间 */
 @property (nonatomic, strong) NSDate *expires_time;
 
+/**
+ *  用户昵称
+ */
+@property (nonatomic, copy) NSString * name;
+
 
 +(id)sinaAccountWithDict:(NSDictionary *)dict;
 

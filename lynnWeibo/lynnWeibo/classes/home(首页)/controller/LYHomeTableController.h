@@ -10,4 +10,9 @@
 
 @interface LYHomeTableController : UITableViewController
 
+/**
+ *  刷新
+ */
+- (void)refresh:(BOOL)fromSelf;
+
 @end
