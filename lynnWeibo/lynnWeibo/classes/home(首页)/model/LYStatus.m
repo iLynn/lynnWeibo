@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "LYWeiboStatus.h"
+#import "LYStatus.h"
 #import "LYStatusPhoto.h"
 #import "MJExtension.h"
 
-@implementation LYWeiboStatus
+@implementation LYStatus
 
 - (NSDictionary *)objectClassInArray
 {

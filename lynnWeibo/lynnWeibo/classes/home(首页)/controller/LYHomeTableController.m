@@ -9,16 +9,17 @@
 #import "LYHomeTableController.h"
 #import "LYTitleButton.h"
 #import "LYPopMenuView.h"
-//#import "AFHTTPRequestOperationManager.h"
 #import "LYSinaAccount.h"
 #import "LYAccountTool.h"
 #import "MBProgressHUD+LY.h"
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
-#import "LYWeiboStatus.h"
-#import "LYStatusUser.h"
+#import "LYStatus.h"
+#import "LYUser.h"
 #import "LYLoadMoreFooterView.h"
 #import "LYHttpTool.h"
+#import "LYStatusCell.h"
+#import "LYStatusFrame.h"
 
 
 @interface LYHomeTableController ()<LYPopMenuViewDelegate>
@@ -26,7 +27,12 @@
 /**
  *  微博数组(存放着所有的微博数据)
  */
-@property (nonatomic, strong) NSMutableArray * statuses;
+//@property (nonatomic, strong) NSMutableArray * statuses;
+
+/**
+ *  微博Frame数组(存放着所有的微博frame数据)
+ */
+@property (nonatomic, strong) NSMutableArray * statusFrames;
 
 @property (nonatomic, weak) LYLoadMoreFooterView *footer;
 
@@ -37,14 +43,24 @@
 @implementation LYHomeTableController
 
 //懒加载
-- (NSMutableArray *)statuses
+//- (NSMutableArray *)statuses
+//{
+//    if (_statuses == nil)
+//    {
+//        _statuses = [NSMutableArray array];
+//    }
+//    
+//    return _statuses;
+//}
+
+- (NSMutableArray *)statusFrames
 {
-    if (_statuses == nil)
+    if (_statusFrames == nil)
     {
-        _statuses = [NSMutableArray array];
+        _statusFrames = [NSMutableArray array];
     }
     
-    return _statuses;
+    return _statusFrames;
 }
 
 - (void)viewDidLoad
@@ -60,9 +76,7 @@
     [self setupRefresh];
     
     //3.加载用户信息
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self setupUserInfo];
-    });
+    [self setupUserInfo];
     
 }
 
@@ -80,7 +94,7 @@
     //2.发送请求
     [LYHttpTool get:@"https://api.weibo.com/2/users/show.json" params:params success:^(id responseObj) {
          // 字典转模型
-         LYStatusUser * user = [LYStatusUser objectWithKeyValues:responseObj];
+         LYUser * user = [LYUser objectWithKeyValues:responseObj];
 
          // 设置用户的昵称为标题
          [self.titleButton setTitle:user.name forState:UIControlStateNormal];
@@ -94,6 +108,8 @@
          [LYAccountTool saveAccount:account];
 
     } failure:^(NSError * error) {
+        
+        LYLog(@"请求失败-------%@", error);
         
     }];
 }
@@ -153,13 +169,35 @@
     else if (fromSelf)
     {
         // 让表格回到最顶部
-        NSIndexPath *firstRow = [NSIndexPath indexPathForRow:0 inSection:0];
+        NSIndexPath * firstRow = [NSIndexPath indexPathForRow:0 inSection:0];
         [self.tableView scrollToRowAtIndexPath:firstRow atScrollPosition:UITableViewScrollPositionTop animated:YES];
         
     }
 }
 
+/**
+ *  根据微博模型数组 转成 微博frame模型数据
+ *
+ *  @param statuses 微博模型数组
+ *
+ */
+- (NSArray *)statusFramesWithStatuses:(NSArray *)statuses
+{
+    NSMutableArray * frames = [NSMutableArray array];
+    for (LYStatus * status in statuses)
+    {
+        LYStatusFrame * frame = [[LYStatusFrame alloc] init];
+        
+        // 传递微博模型数据，计算所有子控件的frame
+        frame.status = status;
+        
+        [frames addObject:frame];
+    }
+    return frames;
+}
+
 #pragma mark - 加载微博数据
+
 /**
  *  加载最新的微博数据
  */
@@ -168,7 +206,8 @@
     //1.封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [LYAccountTool account].access_token;
-    LYWeiboStatus * firstStatus =  [self.statuses firstObject];
+    LYStatusFrame * firstFrame = [self.statusFrames firstObject];
+    LYStatus * firstStatus =  firstFrame.status;
     if (firstStatus)
     {
         params[@"since_id"] = firstStatus.idstr;
@@ -180,12 +219,18 @@
          // 微博字典数组
          NSArray * statusDictArray = responseObj[@"statuses"];
          // 微博字典数组 ---> 微博模型数组
-         NSArray * newStatuses = [LYWeiboStatus objectArrayWithKeyValuesArray:statusDictArray];
+         NSArray * newStatuses = [LYStatus objectArrayWithKeyValuesArray:statusDictArray];
+        
+         // 获得最新的微博frame数组
+         NSArray * newFrames = [self statusFramesWithStatuses:newStatuses];
+        
+         //self.statusFrames = newFrames;
 
          // 将新数据插入到旧数据的最前面
-         NSRange range = NSMakeRange(0, newStatuses.count);
+         NSRange range = NSMakeRange(0, newFrames.count);
          NSIndexSet * indexSet = [NSIndexSet indexSetWithIndexesInRange:range];
-         [self.statuses insertObjects:newStatuses atIndexes:indexSet];
+        
+         [self.statusFrames insertObjects:newFrames atIndexes:indexSet];
 
          // 重新刷新表格
          [self.tableView reloadData];
@@ -194,7 +239,7 @@
          [refreshControl endRefreshing];
          
          // 提示用户最新的微博数量
-         [self showNewStatusesCount:newStatuses.count];
+         [self showNewStatusesCount:newFrames.count];
         
     } failure:^(NSError * error) {
         
@@ -347,35 +392,25 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //没有数据时，隐藏footer
-    self.footer.hidden = self.statuses.count == 0;
+    self.footer.hidden = self.statusFrames.count == 0;
     
-    return self.statuses.count;
+    return self.statusFrames.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * identifier = @"homeCell";
+    LYStatusCell * cell = [LYStatusCell cellWithTableView:tableView];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    
-    if (nil == cell)
-    {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
-    
-    // 取出这行对应的微博模型
-    LYWeiboStatus * status = self.statuses[indexPath.row];
-    cell.textLabel.text = status.text;
-    
-    // 取出用户模型
-    LYStatusUser * user = status.user;
-    cell.detailTextLabel.text = user.name;
-    
-    // 下载头像
-    NSString *imageUrlStr = user.profile_image_url;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrlStr] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    cell.cellFrame = self.statusFrames[indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LYStatusFrame * frame = self.statusFrames[indexPath.row];
+    
+    return frame.cellHeight;
 }
 
 #pragma mark - table view delegate
@@ -397,7 +432,7 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     // 没有数据或正在刷新数据，不响应
-    if (self.statuses.count <= 0 || self.footer.isRefreshing) return;
+    if (self.statusFrames.count <= 0 || self.footer.isRefreshing) return;
     
     // 1.差距
     CGFloat delta = scrollView.contentSize.height - scrollView.contentOffset.y;
@@ -427,7 +462,8 @@
     //1.封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"access_token"] = [LYAccountTool account].access_token;
-    LYWeiboStatus * lastStatus =  [self.statuses lastObject];
+    LYStatusFrame * lastFrame = [self.statusFrames lastObject];
+    LYStatus * lastStatus =  lastFrame.status;
     if (lastStatus)
     {
         params[@"max_id"] = @([lastStatus.idstr longLongValue] - 1);
@@ -439,10 +475,13 @@
          // 微博字典数组
          NSArray *statusDictArray = responseObj[@"statuses"];
          // 微博字典数组 ---> 微博模型数组
-         NSArray *newStatuses = [LYWeiboStatus objectArrayWithKeyValuesArray:statusDictArray];
+         NSArray *newStatuses = [LYStatus objectArrayWithKeyValuesArray:statusDictArray];
+        
+         // 获得最新的微博frame数组
+         NSArray * newFrames = [self statusFramesWithStatuses:newStatuses];
 
          // 将新数据插入到旧数据的最后面
-         [self.statuses addObjectsFromArray:newStatuses];
+         [self.statusFrames addObjectsFromArray:newFrames];
 
          // 重新刷新表格
          [self.tableView reloadData];

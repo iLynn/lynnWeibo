@@ -38,5 +38,9 @@
 #define LYSinaAPIOAuth @"https://api.weibo.com/oauth2/"
 #define LYAppRedirectURI @"http://blog.sina.com.cn/ilynn1990"
 
+//5.计算frame用的一些数据
+#define LYCellMargin 10
+#define LYCustomFontSize [UIFont systemFontOfSize:14]
+#define LYScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #endif

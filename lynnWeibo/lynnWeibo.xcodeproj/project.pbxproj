@@ -49,8 +49,8 @@
 		BA3ECA351B26950300FF7593 /* LYAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA341B26950300FF7593 /* LYAccountTool.m */; };
 		BA3ECA391B26952A00FF7593 /* LYSinaAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA381B26952A00FF7593 /* LYSinaAccount.m */; };
 		BA3ECA3E1B26EA9400FF7593 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA3D1B26EA9400FF7593 /* Foundation+Log.m */; };
-		BA3ECA701B27291800FF7593 /* LYWeiboStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA6F1B27291800FF7593 /* LYWeiboStatus.m */; };
-		BA3ECA731B27292C00FF7593 /* LYStatusUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA721B27292C00FF7593 /* LYStatusUser.m */; };
+		BA3ECA701B27291800FF7593 /* LYStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA6F1B27291800FF7593 /* LYStatus.m */; };
+		BA3ECA731B27292C00FF7593 /* LYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA721B27292C00FF7593 /* LYUser.m */; };
 		BA3ECA761B27293A00FF7593 /* LYStatusPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA751B27293A00FF7593 /* LYStatusPhoto.m */; };
 		BA3ECA8B1B272AA200FF7593 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA791B272AA200FF7593 /* MJArgument.m */; };
 		BA3ECA8C1B272AA200FF7593 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA7C1B272AA200FF7593 /* MJIvar.m */; };
@@ -62,6 +62,15 @@
 		BA3ECA921B272AA200FF7593 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA881B272AA200FF7593 /* NSObject+MJKeyValue.m */; };
 		BA3ECA931B272AA200FF7593 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECA8A1B272AA200FF7593 /* NSObject+MJMember.m */; };
 		BA7E8FF31B23E06100A01A18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7E8FF21B23E06100A01A18 /* Images.xcassets */; };
+		BA9BF2BF1B2BBCBF0073F660 /* LYStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2BE1B2BBCBF0073F660 /* LYStatusCell.m */; };
+		BA9BF2C21B2BBDB60073F660 /* LYStatusDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2C11B2BBDB60073F660 /* LYStatusDetailView.m */; };
+		BA9BF2C51B2BBDCA0073F660 /* LYStatusToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2C41B2BBDCA0073F660 /* LYStatusToolbarView.m */; };
+		BA9BF2C81B2BBDEF0073F660 /* LYDetailOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2C71B2BBDEF0073F660 /* LYDetailOriginalView.m */; };
+		BA9BF2CB1B2BBE0E0073F660 /* LYDeatilRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2CA1B2BBE0E0073F660 /* LYDeatilRetweetView.m */; };
+		BA9BF2CF1B2BD22B0073F660 /* LYStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2CE1B2BD22B0073F660 /* LYStatusFrame.m */; };
+		BA9BF2D21B2BD5620073F660 /* LYStatusDetailFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2D11B2BD5620073F660 /* LYStatusDetailFrame.m */; };
+		BA9BF2D51B2BD57A0073F660 /* LYDetailOriginalFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2D41B2BD57A0073F660 /* LYDetailOriginalFrame.m */; };
+		BA9BF2D81B2BD58E0073F660 /* LYDetailRetweetFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9BF2D71B2BD58E0073F660 /* LYDetailRetweetFrame.m */; };
 		BAB2E5EF1B254FBA00157BF8 /* LYPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB2E5EC1B254FBA00157BF8 /* LYPopMenuView.m */; };
 		BAB2E5F01B254FBA00157BF8 /* LYTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB2E5EE1B254FBA00157BF8 /* LYTitleButton.m */; };
 		BAB2E5F31B25500000157BF8 /* LYSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB2E5F21B25500000157BF8 /* LYSearchBar.m */; };
@@ -177,10 +186,10 @@
 		BA3ECA371B26952A00FF7593 /* LYSinaAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSinaAccount.h; sourceTree = "<group>"; };
 		BA3ECA381B26952A00FF7593 /* LYSinaAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSinaAccount.m; sourceTree = "<group>"; };
 		BA3ECA3D1B26EA9400FF7593 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
-		BA3ECA6E1B27291800FF7593 /* LYWeiboStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYWeiboStatus.h; sourceTree = "<group>"; };
-		BA3ECA6F1B27291800FF7593 /* LYWeiboStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYWeiboStatus.m; sourceTree = "<group>"; };
-		BA3ECA711B27292C00FF7593 /* LYStatusUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusUser.h; sourceTree = "<group>"; };
-		BA3ECA721B27292C00FF7593 /* LYStatusUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusUser.m; sourceTree = "<group>"; };
+		BA3ECA6E1B27291800FF7593 /* LYStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatus.h; sourceTree = "<group>"; };
+		BA3ECA6F1B27291800FF7593 /* LYStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatus.m; sourceTree = "<group>"; };
+		BA3ECA711B27292C00FF7593 /* LYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYUser.h; sourceTree = "<group>"; };
+		BA3ECA721B27292C00FF7593 /* LYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYUser.m; sourceTree = "<group>"; };
 		BA3ECA741B27293A00FF7593 /* LYStatusPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusPhoto.h; sourceTree = "<group>"; };
 		BA3ECA751B27293A00FF7593 /* LYStatusPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusPhoto.m; sourceTree = "<group>"; };
 		BA3ECA781B272AA200FF7593 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
@@ -203,6 +212,24 @@
 		BA3ECA891B272AA200FF7593 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		BA3ECA8A1B272AA200FF7593 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
 		BA7E8FF21B23E06100A01A18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA9BF2BD1B2BBCBF0073F660 /* LYStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusCell.h; sourceTree = "<group>"; };
+		BA9BF2BE1B2BBCBF0073F660 /* LYStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusCell.m; sourceTree = "<group>"; };
+		BA9BF2C01B2BBDB60073F660 /* LYStatusDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusDetailView.h; sourceTree = "<group>"; };
+		BA9BF2C11B2BBDB60073F660 /* LYStatusDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusDetailView.m; sourceTree = "<group>"; };
+		BA9BF2C31B2BBDCA0073F660 /* LYStatusToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusToolbarView.h; sourceTree = "<group>"; };
+		BA9BF2C41B2BBDCA0073F660 /* LYStatusToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusToolbarView.m; sourceTree = "<group>"; };
+		BA9BF2C61B2BBDEF0073F660 /* LYDetailOriginalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDetailOriginalView.h; sourceTree = "<group>"; };
+		BA9BF2C71B2BBDEF0073F660 /* LYDetailOriginalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDetailOriginalView.m; sourceTree = "<group>"; };
+		BA9BF2C91B2BBE0E0073F660 /* LYDeatilRetweetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDeatilRetweetView.h; sourceTree = "<group>"; };
+		BA9BF2CA1B2BBE0E0073F660 /* LYDeatilRetweetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDeatilRetweetView.m; sourceTree = "<group>"; };
+		BA9BF2CD1B2BD22B0073F660 /* LYStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusFrame.h; sourceTree = "<group>"; };
+		BA9BF2CE1B2BD22B0073F660 /* LYStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusFrame.m; sourceTree = "<group>"; };
+		BA9BF2D01B2BD5620073F660 /* LYStatusDetailFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYStatusDetailFrame.h; sourceTree = "<group>"; };
+		BA9BF2D11B2BD5620073F660 /* LYStatusDetailFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYStatusDetailFrame.m; sourceTree = "<group>"; };
+		BA9BF2D31B2BD57A0073F660 /* LYDetailOriginalFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDetailOriginalFrame.h; sourceTree = "<group>"; };
+		BA9BF2D41B2BD57A0073F660 /* LYDetailOriginalFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDetailOriginalFrame.m; sourceTree = "<group>"; };
+		BA9BF2D61B2BD58E0073F660 /* LYDetailRetweetFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYDetailRetweetFrame.h; sourceTree = "<group>"; };
+		BA9BF2D71B2BD58E0073F660 /* LYDetailRetweetFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYDetailRetweetFrame.m; sourceTree = "<group>"; };
 		BAB2E5EA1B254DD400157BF8 /* lynnWeibo_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lynnWeibo_PrefixHeader.pch; sourceTree = "<group>"; };
 		BAB2E5EB1B254FBA00157BF8 /* LYPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPopMenuView.h; sourceTree = "<group>"; };
 		BAB2E5EC1B254FBA00157BF8 /* LYPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPopMenuView.m; sourceTree = "<group>"; };
@@ -467,6 +494,38 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		BA9BF2BC1B2BBC9E0073F660 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA9BF2BD1B2BBCBF0073F660 /* LYStatusCell.h */,
+				BA9BF2BE1B2BBCBF0073F660 /* LYStatusCell.m */,
+				BA9BF2C01B2BBDB60073F660 /* LYStatusDetailView.h */,
+				BA9BF2C11B2BBDB60073F660 /* LYStatusDetailView.m */,
+				BA9BF2C61B2BBDEF0073F660 /* LYDetailOriginalView.h */,
+				BA9BF2C71B2BBDEF0073F660 /* LYDetailOriginalView.m */,
+				BA9BF2C91B2BBE0E0073F660 /* LYDeatilRetweetView.h */,
+				BA9BF2CA1B2BBE0E0073F660 /* LYDeatilRetweetView.m */,
+				BA9BF2C31B2BBDCA0073F660 /* LYStatusToolbarView.h */,
+				BA9BF2C41B2BBDCA0073F660 /* LYStatusToolbarView.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		BA9BF2CC1B2BD21B0073F660 /* cellFrame */ = {
+			isa = PBXGroup;
+			children = (
+				BA9BF2CD1B2BD22B0073F660 /* LYStatusFrame.h */,
+				BA9BF2CE1B2BD22B0073F660 /* LYStatusFrame.m */,
+				BA9BF2D01B2BD5620073F660 /* LYStatusDetailFrame.h */,
+				BA9BF2D11B2BD5620073F660 /* LYStatusDetailFrame.m */,
+				BA9BF2D31B2BD57A0073F660 /* LYDetailOriginalFrame.h */,
+				BA9BF2D41B2BD57A0073F660 /* LYDetailOriginalFrame.m */,
+				BA9BF2D61B2BD58E0073F660 /* LYDetailRetweetFrame.h */,
+				BA9BF2D71B2BD58E0073F660 /* LYDetailRetweetFrame.m */,
+			);
+			path = cellFrame;
+			sourceTree = "<group>";
+		};
 		BAB2E5FE1B258B1300157BF8 /* intro(介绍) */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,10 +616,11 @@
 		BAE6EF141B2549D300178DBD /* model */ = {
 			isa = PBXGroup;
 			children = (
-				BA3ECA6E1B27291800FF7593 /* LYWeiboStatus.h */,
-				BA3ECA6F1B27291800FF7593 /* LYWeiboStatus.m */,
-				BA3ECA711B27292C00FF7593 /* LYStatusUser.h */,
-				BA3ECA721B27292C00FF7593 /* LYStatusUser.m */,
+				BA9BF2CC1B2BD21B0073F660 /* cellFrame */,
+				BA3ECA6E1B27291800FF7593 /* LYStatus.h */,
+				BA3ECA6F1B27291800FF7593 /* LYStatus.m */,
+				BA3ECA711B27292C00FF7593 /* LYUser.h */,
+				BA3ECA721B27292C00FF7593 /* LYUser.m */,
 				BA3ECA741B27293A00FF7593 /* LYStatusPhoto.h */,
 				BA3ECA751B27293A00FF7593 /* LYStatusPhoto.m */,
 			);
@@ -570,6 +630,7 @@
 		BAE6EF151B2549D300178DBD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				BA9BF2BC1B2BBC9E0073F660 /* cell */,
 				BAB2E5ED1B254FBA00157BF8 /* LYTitleButton.h */,
 				BAB2E5EE1B254FBA00157BF8 /* LYTitleButton.m */,
 				BAB2E5EB1B254FBA00157BF8 /* LYPopMenuView.h */,
@@ -903,12 +964,14 @@
 				BA15B5AF1B29B311005BDE9B /* LYWriteToolBar.m in Sources */,
 				BA3ECA271B267ECC00FF7593 /* AFSecurityPolicy.m in Sources */,
 				BA14966C1B2A952F008B4AAD /* SDWebImageDownloader.m in Sources */,
+				BA9BF2D51B2BD57A0073F660 /* LYDetailOriginalFrame.m in Sources */,
 				BA14966E1B2A952F008B4AAD /* SDWebImageManager.m in Sources */,
 				BA3ECA2E1B267ECC00FF7593 /* MBProgressHUD.m in Sources */,
 				BA1496711B2A952F008B4AAD /* UIImage+GIF.m in Sources */,
 				BAB2E5EF1B254FBA00157BF8 /* LYPopMenuView.m in Sources */,
 				BA3ECA251B267ECC00FF7593 /* AFHTTPSessionManager.m in Sources */,
 				BA1496701B2A952F008B4AAD /* UIButton+WebCache.m in Sources */,
+				BA9BF2CF1B2BD22B0073F660 /* LYStatusFrame.m in Sources */,
 				BA14966D1B2A952F008B4AAD /* SDWebImageDownloaderOperation.m in Sources */,
 				BAE6EF4C1B2549D300178DBD /* LYNavigationController.m in Sources */,
 				BA3ECA8E1B272AA200FF7593 /* MJMethod.m in Sources */,
@@ -916,6 +979,7 @@
 				BAE6EF451B2549D300178DBD /* LYHomeTableController.m in Sources */,
 				BA1496761B2A952F008B4AAD /* UIView+WebCacheOperation.m in Sources */,
 				BA3ECA8D1B272AA200FF7593 /* MJMember.m in Sources */,
+				BA9BF2D21B2BD5620073F660 /* LYStatusDetailFrame.m in Sources */,
 				BAE6EF4D1B2549D300178DBD /* LYTabBarController.m in Sources */,
 				BA1496691B2A952F008B4AAD /* SDImageCache.m in Sources */,
 				BA1496671B2A952F008B4AAD /* MKAnnotationView+WebCache.m in Sources */,
@@ -925,6 +989,7 @@
 				BA3ECA241B267ECC00FF7593 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA1496791B2A9A46008B4AAD /* LYHttpTool.m in Sources */,
 				BA15B5AC1B29B2F0005BDE9B /* LYWritePhotosView.m in Sources */,
+				BA9BF2C51B2BBDCA0073F660 /* LYStatusToolbarView.m in Sources */,
 				BA3ECA8C1B272AA200FF7593 /* MJIvar.m in Sources */,
 				BAE6EF4E1B2549D300178DBD /* AppDelegate.m in Sources */,
 				BA3ECA231B267ECC00FF7593 /* AFHTTPRequestOperation.m in Sources */,
@@ -932,11 +997,12 @@
 				BA14966B1B2A952F008B4AAD /* SDWebImageDecoder.m in Sources */,
 				BAE6EF4F1B2549D300178DBD /* LYTabBar.m in Sources */,
 				BA1496751B2A952F008B4AAD /* UIImageView+WebCache.m in Sources */,
+				BA9BF2BF1B2BBCBF0073F660 /* LYStatusCell.m in Sources */,
 				BA3ECA321B2694F500FF7593 /* LYControllerTool.m in Sources */,
 				BA3ECA261B267ECC00FF7593 /* AFNetworkReachabilityManager.m in Sources */,
 				BA3ECA2A1B267ECC00FF7593 /* AFURLResponseSerialization.m in Sources */,
 				BA1496731B2A952F008B4AAD /* UIImage+WebP.m in Sources */,
-				BA3ECA731B27292C00FF7593 /* LYStatusUser.m in Sources */,
+				BA3ECA731B27292C00FF7593 /* LYUser.m in Sources */,
 				BA3ECA921B272AA200FF7593 /* NSObject+MJKeyValue.m in Sources */,
 				BA3ECA291B267ECC00FF7593 /* AFURLRequestSerialization.m in Sources */,
 				BAE6EF4B1B2549D300178DBD /* UIView+ViewFrameExt.m in Sources */,
@@ -946,13 +1012,17 @@
 				BA1496721B2A952F008B4AAD /* UIImage+MultiFormat.m in Sources */,
 				BA1496741B2A952F008B4AAD /* UIImageView+HighlightedWebCache.m in Sources */,
 				BAB2E5F01B254FBA00157BF8 /* LYTitleButton.m in Sources */,
+				BA9BF2C81B2BBDEF0073F660 /* LYDetailOriginalView.m in Sources */,
 				BAE6EF4A1B2549D300178DBD /* UIImage+ResizeExt.m in Sources */,
 				BA3ECA071B267E5200FF7593 /* LYOAuthSinaController.m in Sources */,
+				BA9BF2D81B2BD58E0073F660 /* LYDetailRetweetFrame.m in Sources */,
 				BA15B5A41B29728F005BDE9B /* LYLoadMoreFooterView.m in Sources */,
-				BA3ECA701B27291800FF7593 /* LYWeiboStatus.m in Sources */,
+				BA3ECA701B27291800FF7593 /* LYStatus.m in Sources */,
 				BAB2E5F61B25504C00157BF8 /* LYWriteViewController.m in Sources */,
+				BA9BF2CB1B2BBE0E0073F660 /* LYDeatilRetweetView.m in Sources */,
 				BA323B3B1B22CAB0001E93B0 /* main.m in Sources */,
 				BA14966A1B2A952F008B4AAD /* SDWebImageCompat.m in Sources */,
+				BA9BF2C21B2BBDB60073F660 /* LYStatusDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

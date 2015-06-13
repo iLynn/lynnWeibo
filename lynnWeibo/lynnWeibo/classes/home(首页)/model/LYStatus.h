@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class LYStatusUser;
-@class LYWeiboStatus;
+@class LYUser;
+@class LYStatus;
 
-@interface LYWeiboStatus : NSObject
+@interface LYStatus : NSObject
 
 /** 微博创建时间 */
 @property (nonatomic, copy) NSString * created_at;
@@ -25,10 +25,10 @@
 @property (nonatomic, copy) NSString * source;
 
 /** 微博作者的用户信息字段，是一个完整的对象 */
-@property (nonatomic, strong) LYStatusUser *user;
+@property (nonatomic, strong) LYUser * user;
 
 /** 被转发的原微博信息字段，当该微博为转发微博时返回，是一个完整的对象 */
-@property (nonatomic, strong) LYWeiboStatus *retweeted_status;
+@property (nonatomic, strong) LYStatus * retweeted_status;
 
 /** 转发数 */
 @property (nonatomic, assign) int reposts_count;

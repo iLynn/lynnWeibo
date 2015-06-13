@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Lynn. All rights reserved.
 //
 
-#import "LYStatusUser.h"
+#import "LYUser.h"
 
-@implementation LYStatusUser
+@implementation LYUser
 
 @end
