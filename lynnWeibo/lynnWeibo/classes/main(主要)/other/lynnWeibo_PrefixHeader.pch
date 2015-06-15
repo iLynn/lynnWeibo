@@ -41,6 +41,8 @@
 //5.计算frame用的一些数据
 #define LYCellMargin 10
 #define LYCustomFontSize [UIFont systemFontOfSize:14]
+#define LYTimeFontSize [UIFont systemFontOfSize:11]
+#define LYRetweetFontColor LYColor(90, 200, 90)
 #define LYScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #endif

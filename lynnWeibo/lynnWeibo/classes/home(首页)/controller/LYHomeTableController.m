@@ -25,11 +25,6 @@
 @interface LYHomeTableController ()<LYPopMenuViewDelegate>
 
 /**
- *  微博数组(存放着所有的微博数据)
- */
-//@property (nonatomic, strong) NSMutableArray * statuses;
-
-/**
  *  微博Frame数组(存放着所有的微博frame数据)
  */
 @property (nonatomic, strong) NSMutableArray * statusFrames;
@@ -43,15 +38,6 @@
 @implementation LYHomeTableController
 
 //懒加载
-//- (NSMutableArray *)statuses
-//{
-//    if (_statuses == nil)
-//    {
-//        _statuses = [NSMutableArray array];
-//    }
-//    
-//    return _statuses;
-//}
 
 - (NSMutableArray *)statusFrames
 {
@@ -66,6 +52,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //cell的间隔
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     LYLog(@"LYHomeTableController--viewDidLoad");
     

@@ -27,9 +27,13 @@
 {
     if (self = [super initWithFrame:frame])
     {
+        //设置背景
+        self.image = [UIImage resizedImage:@"timeline_retweet_background"];
+        
         //1.昵称
         UILabel * name = [[UILabel alloc] init];
         name.font = LYCustomFontSize;
+        name.textColor = LYRetweetFontColor;
         [self addSubview:name];
         
         self.nameLab = name;
@@ -57,7 +61,7 @@
     LYUser * user = retweetStatus.user;
     
     //1.昵称
-    self.nameLab.text = user.name;
+    self.nameLab.text = [NSString stringWithFormat:@"@%@", user.name];
     self.nameLab.frame = retweetFrame.nameFrame;
     
     //2.正文

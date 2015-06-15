@@ -19,12 +19,13 @@
     // 1.昵称
     CGFloat nameX = LYCellMargin;
     CGFloat nameY = LYCellMargin;
-    CGSize nameSize = [retweetStatus.user.name sizeWithFont:LYCustomFontSize];
+    NSString * name = [NSString stringWithFormat:@"@%@", retweetStatus.user.name];
+    CGSize nameSize = [name sizeWithFont:LYCustomFontSize];
     self.nameFrame = (CGRect){{nameX, nameY}, nameSize};
     
     // 2.正文
     CGFloat textX = nameX;
-    CGFloat textY = CGRectGetMaxY(self.nameFrame) + LYCellMargin;
+    CGFloat textY = CGRectGetMaxY(self.nameFrame) + LYCellMargin * 0.5;
     CGFloat maxW = LYScreenWidth - 2 * textX;
     CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
     

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LYStatus;
 
-@interface LYStatusToolbarView : UIView
+@interface LYStatusToolbarView : UIImageView
+
+@property (nonatomic, strong) LYStatus * status;
 
 @end

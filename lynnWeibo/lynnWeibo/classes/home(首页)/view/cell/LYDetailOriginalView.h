@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class LYDetailOriginalFrame;
 
-@interface LYDetailOriginalView : UIView
+@interface LYDetailOriginalView : UIImageView
 
 @property (nonatomic, strong) LYDetailOriginalFrame * originalFrame;
 

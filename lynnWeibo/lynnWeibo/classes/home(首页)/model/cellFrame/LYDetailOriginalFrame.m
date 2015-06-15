@@ -29,17 +29,27 @@
     CGSize nameSize = [status.user.name sizeWithFont:LYCustomFontSize];
     self.nameFrame = (CGRect){{nameX, nameY}, nameSize};
     
-    // 3.时间
-    CGFloat timeX = nameX;
-    CGFloat timeY = CGRectGetMaxY(self.nameFrame) + LYCellMargin;
-    CGSize timeSize = [status.created_at sizeWithFont:LYCustomFontSize];
-    self.timeFrame = (CGRect){{timeX, timeY}, timeSize};
+    // 计算会员图标的位置
+    if (status.user.isVip)
+    {
+        CGFloat vipX = CGRectGetMaxX(self.nameFrame) + LYCellMargin;
+        CGFloat vipY = nameY;
+        CGFloat vipH = nameSize.height;
+        CGFloat vipW = vipH;
+        self.vipFrame = CGRectMake(vipX, vipY, vipW, vipH);
+    }
     
-    // 4.来源
-    CGFloat sourceX = CGRectGetMaxX(self.timeFrame) + LYCellMargin;
-    CGFloat sourceY = timeY;
-    CGSize sourceSize = [status.source sizeWithFont:LYCustomFontSize];
-    self.sourceFrame = (CGRect){{sourceX, sourceY}, sourceSize};
+//    // 3.时间
+//    CGFloat timeX = nameX;
+//    CGFloat timeY = CGRectGetMaxY(self.nameFrame) + LYCellMargin * 0.5;
+//    CGSize timeSize = [status.created_at sizeWithFont:LYCustomFontSize];
+//    self.timeFrame = (CGRect){{timeX, timeY}, timeSize};
+//    
+//    // 4.来源
+//    CGFloat sourceX = CGRectGetMaxX(self.timeFrame) + LYCellMargin * 0.5;
+//    CGFloat sourceY = timeY;
+//    CGSize sourceSize = [status.source sizeWithFont:LYCustomFontSize];
+//    self.sourceFrame = (CGRect){{sourceX, sourceY}, sourceSize};
     
     // 5.正文
     CGFloat textX = iconX;

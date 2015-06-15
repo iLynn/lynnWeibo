@@ -37,6 +37,9 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        //设置背景颜色
+        self.backgroundColor = LYColor(240, 240, 240);
+        
         //1.添加微博详细区
         LYStatusDetailView * detailView = [[LYStatusDetailView alloc] init];
         [self.contentView addSubview:detailView];
@@ -63,6 +66,7 @@
     
     // 2.底部工具条的frame数据
     self.toolbarView.frame = cellFrame.toolbarFrame;
+    self.toolbarView.status = cellFrame.status;
     
 }
 

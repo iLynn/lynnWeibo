@@ -14,17 +14,20 @@
 /** 昵称Frame */
 @property (nonatomic, assign) CGRect nameFrame;
 
-/** 时间Frame */
-@property (nonatomic, assign) CGRect timeFrame;
-
-/** 来源Frame */
-@property (nonatomic, assign) CGRect sourceFrame;
+///** 时间Frame */
+//@property (nonatomic, assign) CGRect timeFrame;
+//
+///** 来源Frame */
+//@property (nonatomic, assign) CGRect sourceFrame;
 
 /** 正文Frame */
 @property (nonatomic, assign) CGRect contentFrame;
 
 /** 头像Frame */
 @property (nonatomic, assign) CGRect iconFrame;
+
+/** 会员图标Frame */
+@property (nonatomic, assign) CGRect vipFrame;
 
 /** 整个detail区域frame */
 @property (nonatomic, assign) CGRect frame;

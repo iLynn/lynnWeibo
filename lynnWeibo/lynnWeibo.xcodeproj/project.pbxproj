@@ -88,6 +88,7 @@
 		BAE6EF4F1B2549D300178DBD /* LYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF2E1B2549D300178DBD /* LYTabBar.m */; };
 		BAE6EF501B2549D300178DBD /* LYMessageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF321B2549D300178DBD /* LYMessageTableController.m */; };
 		BAE6EF511B2549D300178DBD /* LYProfileTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE6EF381B2549D300178DBD /* LYProfileTableController.m */; };
+		BAFC540F1B2E92A900184B6B /* NSDate+computeExt.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFC540E1B2E92A900184B6B /* NSDate+computeExt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +265,8 @@
 		BAE6EF321B2549D300178DBD /* LYMessageTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMessageTableController.m; sourceTree = "<group>"; };
 		BAE6EF371B2549D300178DBD /* LYProfileTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYProfileTableController.h; sourceTree = "<group>"; };
 		BAE6EF381B2549D300178DBD /* LYProfileTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYProfileTableController.m; sourceTree = "<group>"; };
+		BAFC540D1B2E92A900184B6B /* NSDate+computeExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+computeExt.h"; sourceTree = "<group>"; };
+		BAFC540E1B2E92A900184B6B /* NSDate+computeExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+computeExt.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -660,6 +663,8 @@
 			isa = PBXGroup;
 			children = (
 				BA3ECA3D1B26EA9400FF7593 /* Foundation+Log.m */,
+				BAFC540D1B2E92A900184B6B /* NSDate+computeExt.h */,
+				BAFC540E1B2E92A900184B6B /* NSDate+computeExt.m */,
 				BAE6EF1C1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.h */,
 				BAE6EF1D1B2549D300178DBD /* UIBarButtonItem+ButtonImageExt.m */,
 				BAE6EF1E1B2549D300178DBD /* UIImage+ResizeExt.h */,
@@ -989,6 +994,7 @@
 				BA3ECA241B267ECC00FF7593 /* AFHTTPRequestOperationManager.m in Sources */,
 				BA1496791B2A9A46008B4AAD /* LYHttpTool.m in Sources */,
 				BA15B5AC1B29B2F0005BDE9B /* LYWritePhotosView.m in Sources */,
+				BAFC540F1B2E92A900184B6B /* NSDate+computeExt.m in Sources */,
 				BA9BF2C51B2BBDCA0073F660 /* LYStatusToolbarView.m in Sources */,
 				BA3ECA8C1B272AA200FF7593 /* MJIvar.m in Sources */,
 				BAE6EF4E1B2549D300178DBD /* AppDelegate.m in Sources */,

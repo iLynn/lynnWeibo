@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class LYDetailRetweetFrame;
 
-@interface LYDeatilRetweetView : UIView
+@interface LYDeatilRetweetView : UIImageView
 
 @property (nonatomic, strong) LYDetailRetweetFrame * retweetFrame;
 
